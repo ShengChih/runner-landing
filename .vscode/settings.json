@@ -24,7 +24,7 @@
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
+    "source.fixAll.eslint": true,
   },
   "eslint.codeActionsOnSave.rules": [
     "linebreak-style",
