@@ -9,7 +9,8 @@
   "cSpell.words": [
     "commitlint",
     "Nuxt",
-    "nuxtjs"
+    "nuxtjs",
+    "windicss"
   ],
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
