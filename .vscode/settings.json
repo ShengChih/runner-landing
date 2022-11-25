@@ -10,6 +10,8 @@
     "commitlint",
     "Nuxt",
     "nuxtjs",
+    "pinia",
+    "windi",
     "windicss"
   ],
   "[javascript]": {
