@@ -7,23 +7,45 @@
   "eslint.packageManager": "pnpm",
   "eslint.run": "onSave",
   "cSpell.words": [
+    "attributify",
     "commitlint",
+    "Genjyuu",
+    "genjyuugothic",
+    "genjyuugothicx",
     "Nuxt",
     "nuxtjs",
     "pinia",
+    "truetype",
+    "vueuse",
     "windi",
     "windicss"
   ],
   "[javascript]": {
+    "editor.tabSize": 2,
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   },
   "[javascriptreact]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  },
+  "[css]": {
+    "editor.tabSize": 2,
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   },
   "[typescript]": {
+    "editor.tabSize": 2,
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   },
   "[typescriptreact]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  },
+  "[html]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  },
+  "[vue]": {
+    "editor.tabSize": 2,
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   },
   "editor.codeActionsOnSave": {
