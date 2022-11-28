@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './components/**/*.{vue,js,ts}',
@@ -10,6 +9,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        sm: { min: '375px', max: '767px' },
+        '2xl': { min: '1440px', max: '1920px' }
+      },
       fontFamily: {},
       colors: {
         primary: {

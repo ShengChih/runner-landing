@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   ssr: true,
 
   typescript: {
-    strict: true,
+    strict: false,
     typeCheck: true
   },
 
@@ -12,30 +12,15 @@ export default defineNuxtConfig({
   components: true,
 
   modules: [
-    'nuxt-windicss',
     '@pinia/nuxt',
     '@vueuse/nuxt'
   ],
 
   css: [
-    // '/assets/styles/windicss.css',
     '/assets/styles/tailwind.css',
-    // 'virtual:windi-base.css',
-    // 'virtual:windi-components.css',
-    // 'virtual:windi-utilities.css',
     'animate.css/animate.min.css',
     '/assets/styles/global.css'
   ],
-
-  postcss: {
-    plugins: {
-      // 'postcss-windicss': {}
-      'postcss-import': {},
-      'tailwindcss/nesting': {},
-      tailwindcss: {},
-      autoprefixer: {}
-    }
-  },
 
   vite: {
     server: {
@@ -47,5 +32,6 @@ export default defineNuxtConfig({
   },
 
   build: {
+
   }
 })
