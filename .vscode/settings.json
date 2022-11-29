@@ -16,15 +16,24 @@
     "Nuxt",
     "nuxtjs",
     "pinia",
+    "postcss",
     "tailwindcss",
     "truetype",
     "vueuse",
     "windi",
     "windicss"
   ],
-  "[javascript]": {
+  "[scss]": {
     "editor.tabSize": 2,
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  },
+  "[sass]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  },
+  "[javascript]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "vscode.typescript-language-features",
   },
   "[javascriptreact]": {
     "editor.tabSize": 2,

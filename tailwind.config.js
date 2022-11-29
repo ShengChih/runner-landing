@@ -1,4 +1,7 @@
 module.exports = {
+  corePlugins: {
+    preflight: true
+  },
   content: [
     './components/**/*.{vue,js,ts}',
     './layouts/**/*.vue',
@@ -8,10 +11,14 @@ module.exports = {
     './app.{js,ts,vue}'
   ],
   theme: {
+    screens: {
+      sm: { min: '375px', max: '767px' },
+      md: { min: '768px', max: '1439px' },
+      '2xl': { min: '1440px', max: '1919px' }
+    },
     extend: {
       screens: {
-        sm: { min: '375px', max: '767px' },
-        '2xl': { min: '1440px', max: '1920px' }
+        '3xl': { min: '1920px' }
       },
       fontFamily: {},
       colors: {
