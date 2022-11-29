@@ -1,0 +1,44 @@
+@use 'sass:math';
+
+// Max breakpoint
+$max-breakpoint-sm: 375;
+$max-breakpoint-md: 768;
+$max-breakpoint-2xl: 1440;
+$max-breakpoint-3xl: 1440;
+
+
+// This could be one of your media query breakpoint variables
+$wide-screen-sm: "(min-width: #{$max-breakpoint-sm}px)";
+$wide-screen-md: "(min-width: #{$max-breakpoint-md}px)";
+$wide-screen-2xl: "(min-width: #{$max-breakpoint-2xl}px)";
+$wide-screen-3xl: "(min-width: #{$max-breakpoint-3xl}px)";
+
+
+// Function
+@function get-sm-vw($target) {
+  // 1 vw is equal to 1% of the viewport width
+  $vw-context: ($max-breakpoint-sm * .01) * 1px; // 1% viewport width
+  @return ($target/$vw-context) * 1vw;
+}
+
+@function get-md-vw($target) {
+  // 1 vw is equal to 1% of the viewport width
+  $vw-context: ($max-breakpoint-md * .01) * 1px; // 1% viewport width
+  @return ($target/$vw-context) * 1vw;
+}
+
+@function get-xl-vw($target) {
+  // 1 vw is equal to 1% of the viewport width
+  $vw-context: ($max-breakpoint-xl * .01) * 1px; // 1% viewport width
+  @return ($target/$vw-context) * 1vw;
+}
+
+@function get-2xl-vw($target) {
+  // 1 vw is equal to 1% of the viewport width
+  $vw-context: ($max-breakpoint-2xl * .01) * 1px; // 1% viewport width
+  @return ($target/$vw-context) * 1vw;
+}
+
+@function get-percent($target, $base) {
+  @return math.div($target * 100, $base) * 1%;
+}
