@@ -31,9 +31,7 @@ const excludeCssAttributes = [
   '!max-height',
   '!font-size',
   '!filter',
-  '!border-radius',
-  '!column-gap',
-  '!row-gap'
+  '!border-radius'
 ]
 
 module.exports = {
