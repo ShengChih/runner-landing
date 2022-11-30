@@ -18,20 +18,28 @@ if (process.client) {
       }
     })
 
-    tl.set('#starting_visual .light-red', { opacity: 1 })
-      .set('#starting_visual .light-orange', { opacity: 0 })
-      .set('#starting_visual .light-green', { opacity: 0 })
-      .to('#starting_visual .light-red', { opacity: 0 })
-      .to('#starting_visual .light-orange', { opacity: 1 }, '<')
-      .to('#starting_visual .light-orange', { opacity: 0 })
-      .to('#starting_visual .light-green', { opacity: 1 }, '<')
-      .to('#starting_visual .starting-point', { opacity: 0, duration: 4 })
-      .to('#starting_visual .starting-point', { scaleX: 0, duration: 2 }, '<')
-      .to('#starting_visual .starting-point', { scaleY: 0, yPercent: 50, duration: 2 }, '<')
-      .to('#starting_visual .starting-info', { opacity: 0, duration: 0.2, scale: 0 }, '<')
-      .to('#starting_visual .left-cloud', { scale: 0, opacity: 0, duration: 2, xPercent: 100, yPercent: -50 }, '<')
-      .to('#starting_visual .right-cloud', { scale: 0, opacity: 0, duration: 2, xPercent: -100, yPercent: -50 }, '<')
-      .to('#starting_visual .traffic-light', { opacity: 0 }, '<')
+    tl.set('#starting-visual .light-red', { opacity: 1 })
+      .set('#starting-visual .light-orange', { opacity: 0 })
+      .set('#starting-visual .light-green', { opacity: 0 })
+      .to('#starting-visual .light-red', { opacity: 0 })
+      .to('#starting-visual .light-orange', { opacity: 1 }, '<')
+      .to('#starting-visual .light-orange', { opacity: 0 })
+      .to('#starting-visual .light-green', {
+        opacity: 1,
+        onComplete: () => {
+          (document.querySelector('#starting-visual .traffic-text') as HTMLElement).innerText = 'GO!!!'
+        },
+        onReverseComplete: () => {
+          (document.querySelector('#starting-visual .traffic-text') as HTMLElement).innerText = 'READY?'
+        }
+      }, '<')
+      .to('#starting-visual .starting-point', { opacity: 0, duration: 4 })
+      .to('#starting-visual .starting-point', { scaleX: 0, duration: 2 }, '<')
+      .to('#starting-visual .starting-point', { scaleY: 0, yPercent: 50, duration: 2 }, '<')
+      .to('#starting-visual .starting-info', { opacity: 0, duration: 0.2, scale: 0 }, '<')
+      .to('#starting-visual .left-cloud', { scale: 0, opacity: 0, duration: 2, xPercent: 100, yPercent: -50 }, '<')
+      .to('#starting-visual .right-cloud', { scale: 0, opacity: 0, duration: 2, xPercent: -100, yPercent: -50 }, '<')
+      .to('#starting-visual .traffic-light', { opacity: 0 }, '<')
   })
 
   onUnmounted(() => {
