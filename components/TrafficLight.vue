@@ -14,17 +14,17 @@
         <div class="grow" />
         <div class=" flex flex-row 2xl:gap-x-[1.11111vw] 2xl:w-[12.43056vw] 2xl:h-[3.40278vw]">
           <img
-            class="2xl:translate-x-[0.13889vw]"
+            class="light-red 2xl:translate-x-[0.13889vw]"
             alt="red"
             src="~/assets/images/main/ready_3.png"
           >
           <img
-            class="2xl:translate-x-[0.13889vw]"
+            class="light-orange 2xl:translate-x-[0.13889vw]"
             alt="orange"
             src="~/assets/images/main/ready_2.png"
           >
           <img
-            class="2xl:translate-x-[0.13889vw]"
+            class="light-green 2xl:translate-x-[0.13889vw]"
             alt="green"
             src="~/assets/images/main/ready_1.png"
           >
