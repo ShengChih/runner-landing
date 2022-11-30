@@ -28,8 +28,10 @@ if (process.client) {
       .to('#starting_visual .starting-point', { opacity: 0, duration: 4 })
       .to('#starting_visual .starting-point', { scaleX: 0, duration: 2 }, '<')
       .to('#starting_visual .starting-point', { scaleY: 0, yPercent: 50, duration: 2 }, '<')
+      .to('#starting_visual .starting-info', { opacity: 0, duration: 0.2, scale: 0 }, '<')
       .to('#starting_visual .left-cloud', { scale: 0, opacity: 0, duration: 2, xPercent: 100, yPercent: -50 }, '<')
       .to('#starting_visual .right-cloud', { scale: 0, opacity: 0, duration: 2, xPercent: -100, yPercent: -50 }, '<')
+      .to('#starting_visual .traffic-light', { opacity: 0 }, '<')
   })
 
   onUnmounted(() => {

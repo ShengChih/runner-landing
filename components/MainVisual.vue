@@ -3,11 +3,11 @@
     <LeftCloud class="left-cloud absolute 2xl:translate-y-[29.375vw] 2xl:translate-x-[-25.20833vw]" />
     <RightCloud class="right-cloud absolute 2xl:translate-y-[31.59722vw] 2xl:translate-x-[35.17361vw]" />
     <Starting class="starting-point absolute 2xl:translate-y-0" />
-    <SubjectText class="absolute 2xl:translate-y-[18.61111vw]" />
+    <SubjectText class="starting-info absolute 2xl:translate-y-[18.61111vw]" />
     <TrafficLight class="absolute right-0 2xl:translate-y-[30.20833vw]" />
-    <AttendanceInfo class="absolute 2xl:translate-y-[26.94444vw]" />
+    <AttendanceInfo class="starting-info absolute 2xl:translate-y-[26.94444vw]" />
     <TopicLogo
-      class="absolute self-start"
+      class="starting-info absolute self-start"
     />
     <JoinButton class="absolute  2xl:translate-x-[45.03472vw] 2xl:translate-y-[57.70833vw]" />
   </div>

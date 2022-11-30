@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap  2xl:w-[19.09722vw] 2xl:h-[10.69444vw] 2xl:pb-[0.41667vw]">
+  <div class="traffic-light flex flex-wrap  2xl:w-[19.09722vw] 2xl:h-[10.69444vw] 2xl:pb-[0.41667vw]">
     <h1 class="tracking-wider text-center text-highlight-default w-full 2xl:leading-[2.77778vw] 2xl:h-[2.77778vw]">
       READY?
     </h1>
