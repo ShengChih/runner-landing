@@ -15,6 +15,6 @@
     />
     <Map class="absolute 2xl:w-[18.05556vw] 2xl:h-[11.80556vw] 2xl:translate-x-[-38.88889vw] 2xl:translate-y-[57.91667vw]" />
     <JoinButton class="absolute  2xl:translate-x-[45.03472vw] 2xl:translate-y-[57.70833vw]" />
-    <SideMenu class="fixed left-0" />
+    <SideMenu class="fixed 2xl:left-[-0.34722vw] 2xl:pb-[3.85417vw]" />
   </div>
 </template>
