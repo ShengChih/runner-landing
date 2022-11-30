@@ -12,7 +12,7 @@
       >
       <div class="w-full absolute flex flex-no-wrap">
         <div class="grow" />
-        <div class=" flex flex-row 2xl:gap-x-[16px] 2xl:w-[12.43056vw] 2xl:h-[3.40278vw]">
+        <div class=" flex flex-row 2xl:gap-x-[1.11111vw] 2xl:w-[12.43056vw] 2xl:h-[3.40278vw]">
           <img
             class="2xl:translate-x-[0.13889vw]"
             alt="red"

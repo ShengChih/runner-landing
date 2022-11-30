@@ -9,7 +9,7 @@ if (process.client) {
     <NuxtLayout>
       <MainVisual />
 
-      <Avatar class="right-0 avatar 2xl:translate-x-[-15px] 3xl:translate-x-[-20px]" />
+      <Avatar class="right-0 avatar 2xl:translate-x-[-1.04167vw] 2xl:translate-y-[2.08333vw]" />
     </NuxtLayout>
   </div>
 </template>
