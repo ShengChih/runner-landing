@@ -33,13 +33,16 @@ if (process.client) {
           (document.querySelector('#starting-visual .traffic-text') as HTMLElement).innerText = 'READY?'
         }
       }, '<')
-      .to('#starting-visual .starting-point', { opacity: 0, duration: 4 })
+      .to('#starting-visual .starting-point', { opacity: 0, duration: 3 })
       .to('#starting-visual .starting-point', { scaleX: 0, duration: 2 }, '<')
       .to('#starting-visual .starting-point', { scaleY: 0, yPercent: 50, duration: 2 }, '<')
       .to('#starting-visual .starting-info', { opacity: 0, duration: 0.2, scale: 0 }, '<')
       .to('#starting-visual .left-cloud', { scale: 0, opacity: 0, duration: 2, xPercent: 100, yPercent: -50 }, '<')
       .to('#starting-visual .right-cloud', { scale: 0, opacity: 0, duration: 2, xPercent: -100, yPercent: -50 }, '<')
       .to('#starting-visual .traffic-light', { opacity: 0 }, '<')
+      .to('.playground', { scale: 0.7684 })
+      .to('.pig, .dog', { scale: 0.7086, yPercent: 13 }, '<')
+      .to('.cat', { scale: 0.70533, yPercent: 13 }, '<')
   })
 
   onUnmounted(() => {
@@ -57,10 +60,10 @@ if (process.client) {
       <div
         class="w-screen h-screen fixed flex justify-center top-0 left-0"
       >
-        <Playground id="playground" class="fixed 2xl:top-[61.73611vw]" />
-        <Dog class="fixed 2xl:translate-y-[34.86111vw] 2xl:translate-x-[-20.69444vw]" />
-        <Cat class="fixed 2xl:translate-y-[34.16667vw] 2xl:translate-x-[-0.65972vw]" />
-        <Pig class="fixed 2xl:translate-y-[39.65278vw] 2xl:translate-x-[20.27778vw]" />
+        <Playground class="playground fixed 2xl:top-[61.73611vw]" />
+        <Dog class="dog fixed 2xl:translate-y-[34.86111vw] 2xl:translate-x-[-20.69444vw]" />
+        <Cat class="cat fixed 2xl:translate-y-[34.16667vw] 2xl:translate-x-[-0.65972vw]" />
+        <Pig class="pig fixed 2xl:translate-y-[39.65278vw] 2xl:translate-x-[20.27778vw]" />
         <Avatar class="right-0 avatar 2xl:translate-x-[-1.04167vw] 2xl:translate-y-[2.08333vw]" />
         <Map class="fixed 2xl:w-[18.05556vw] 2xl:h-[11.80556vw] 2xl:translate-x-[-38.88889vw] 2xl:translate-y-[57.91667vw]" />
         <SideMenu class="fixed 2xl:left-[-0.34722vw]" />
