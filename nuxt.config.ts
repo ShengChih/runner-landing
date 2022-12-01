@@ -18,7 +18,10 @@ export default defineNuxtConfig({
   },
 
   // auto import components
-  components: true,
+  components: {
+    global: true,
+    dirs: ['~/components']
+  },
 
   modules: [
     // '@nuxtjs/tailwindcss',

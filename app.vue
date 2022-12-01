@@ -54,7 +54,6 @@ if (process.client) {
         pin: true,
         scrub: true,
         markers: true,
-        pinSpacing: true,
         id: 't2'
       }
     })
@@ -86,6 +85,38 @@ if (process.client) {
       .to('#mask-top .right-tree', { xPercent: -100, opacity: 0, yPercent: -30, duration:0.5 }, '<')
 
     timelines.push(t2)
+
+    const t3 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#third-stage',
+        pin: true,
+        pinnedContainer: '#app',
+        scrub: true,
+        markers: true,
+        id: "t3",
+        pinSpacing: true,
+      }
+    })
+
+    t3.set('#third-stage .third-part1', { opacity: 0 })
+      .set('#third-stage .third-part2', { opacity: 0, yPercent: 15 })
+      .to('#second-stage', { opacity: 0, duration: 0.1 })
+      .to('#mask-top .playground', { scale: 1, yPercent: 0, duration: 0.5 }, '<')
+      .to('#mask-top .pig, .dog', { scale: 1, yPercent: 0, duration: 0.5 }, '<')
+      .to('#mask-top .cat', { scale: 1, yPercent: 0, duration: 0.5 }, '<')
+      .to('#mask-top .wait', { duration: 0.5 })
+      .to('#third-stage .third-part1', { opacity: 1, duration: 0.3 })
+      .to('#mask-top .wait', { duration: 0.3 })
+      .to('#third-stage .third-part2', { opacity: 1, yPercent: 0, duration: 0.3 })
+      .to('#mask-top .wait', { duration: 0.5 })
+      .to('#third-stage .third-part1, .third-part2', { opacity: 0, duration: 1 })
+      .to('#mask-top .wait', { duration: 1 })
+      .to('#mask-top .playground', { scale: 0.7684, duration: 0.5 }, '<')
+      .to('#mask-top .playground', { yPercent: 13, duration: 0.5 }, '<')
+      .to('#mask-top .pig, .dog', { scale: 0.7086, duration: 0.5, yPercent: 15 }, '<')
+      .to('#mask-top .cat', { scale: 0.70533, duration: 0.5, yPercent: 15 }, '<')
+
+    timelines.push(t3)
   })
 
   onUnmounted(() => {
@@ -100,6 +131,7 @@ if (process.client) {
     <NuxtLayout>
       <FirstStage />
       <SecondStage />
+      <ThirdStage />
       <div
         id="mask-top"
         class="wait w-screen h-screen fixed flex justify-center top-0 left-0"
