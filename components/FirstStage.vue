@@ -1,5 +1,5 @@
 <template>
-  <div id="starting-visual" class="relative flex flex-no-wrap justify-center w-full h-screen">
+  <div id="first-stage" class="relative flex flex-no-wrap justify-center w-full h-screen">
     <LeftCloud class="left-cloud absolute 2xl:translate-y-[29.375vw] 2xl:translate-x-[-25.20833vw]" />
     <RightCloud class="right-cloud absolute 2xl:translate-y-[31.59722vw] 2xl:translate-x-[35.17361vw]" />
     <Starting class="starting-point absolute 2xl:translate-y-0" />
@@ -9,6 +9,5 @@
     <TopicLogo
       class="starting-info absolute self-start"
     />
-    <JoinButton class="absolute  2xl:translate-x-[45.03472vw] 2xl:translate-y-[57.70833vw]" />
   </div>
 </template>

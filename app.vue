@@ -5,66 +5,114 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 if (process.client) {
   gsap.registerPlugin(ScrollTrigger)
 
-  let tl: ReturnType<typeof gsap.timeline> | undefined
+  const timelines: ReturnType<typeof gsap.timeline>[] = []
 
   console.log(window)
 
   onMounted(() => {
-    const tl = gsap.timeline({
+    const t1 = gsap.timeline({
       scrollTrigger: {
-        trigger: '#app',
+        trigger: '#first-stage',
+        pinnedContainer: '#app',
         pin: true,
-        scrub: true
+        scrub: true,
+        markers: true,
+        id: 't1'
       }
     })
 
-    tl.set('#starting-visual .light-red', { opacity: 1 })
-      .set('#starting-visual .light-orange', { opacity: 0 })
-      .set('#starting-visual .light-green', { opacity: 0 })
-      .to('#starting-visual .light-red', { opacity: 0 })
-      .to('#starting-visual .light-orange', { opacity: 1 }, '<')
-      .to('#starting-visual .light-orange', { opacity: 0 })
-      .to('#starting-visual .light-green', {
+    t1.set('#first-stage .light-red', { opacity: 1 })
+      .set('#first-stage .light-orange', { opacity: 0 })
+      .set('#first-stage .light-green', { opacity: 0 })
+      .to('#first-stage .light-red', { opacity: 0 })
+      .to('#first-stage .light-orange', { opacity: 1 }, '<')
+      .to('#first-stage .light-orange', { opacity: 0 })
+      .to('#first-stage .light-green', {
         opacity: 1,
         onComplete: () => {
-          (document.querySelector('#starting-visual .traffic-text') as HTMLElement).innerText = 'GO!!!'
+          (document.querySelector('#first-stage .traffic-text') as HTMLElement).innerText = 'GO!!!'
         },
         onReverseComplete: () => {
-          (document.querySelector('#starting-visual .traffic-text') as HTMLElement).innerText = 'READY?'
+          (document.querySelector('#first-stage .traffic-text') as HTMLElement).innerText = 'READY?'
         }
       }, '<')
-      .to('#starting-visual .starting-point', { opacity: 0, duration: 3 })
-      .to('#starting-visual .starting-point', { scaleX: 0, duration: 2 }, '<')
-      .to('#starting-visual .starting-point', { scaleY: 0, yPercent: 50, duration: 2 }, '<')
-      .to('#starting-visual .starting-info', { opacity: 0, duration: 0.2, scale: 0 }, '<')
-      .to('#starting-visual .left-cloud', { scale: 0, opacity: 0, duration: 2, xPercent: 100, yPercent: -50 }, '<')
-      .to('#starting-visual .right-cloud', { scale: 0, opacity: 0, duration: 2, xPercent: -100, yPercent: -50 }, '<')
-      .to('#starting-visual .traffic-light', { opacity: 0 }, '<')
-      .to('.playground', { scale: 0.7684 })
-      .to('.pig, .dog', { scale: 0.7086, yPercent: 13 }, '<')
-      .to('.cat', { scale: 0.70533, yPercent: 13 }, '<')
+      .to('#first-stage .starting-point', { opacity: 0, duration: 1 })
+      .to('#first-stage .starting-point', { scaleX: 0, duration: 0.66 }, '<')
+      .to('#first-stage .starting-point', { scaleY: 0, yPercent: 100, duration: 2 }, '<')
+      .to('#first-stage .starting-info', { opacity: 0, duration: 0.2, scale: 0 }, '<')
+      .to('#first-stage .left-cloud', { scale: 0, opacity: 0, duration: 2, xPercent: 100, yPercent: -50 }, '<')
+      .to('#first-stage .right-cloud', { scale: 0, opacity: 0, duration: 2, xPercent: -100, yPercent: -50 }, '<')
+      .to('#first-stage .traffic-light', { opacity: 0 }, '<')
+      .to('#mask-top .f2e_logo', { opacity: 1 })
+
+    timelines.push(t1)
+
+    const t2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#second-stage',
+        pinnedContainer: '#app',
+        pin: true,
+        scrub: true,
+        markers: true,
+        pinSpacing: true,
+        id: 't2'
+      }
+    })
+
+    t2.set('#second-stage .asking', { opacity: 0 })
+      .set('#second-stage .question1', { opacity: 0, xPercent: -10 } )
+      .set('#second-stage .question2', { opacity: 0 } )
+      .set('#second-stage .question3', { opacity: 0, xPercent: 10 } )
+      .set('#mask-top .f2e_logo', { opacity: 0 } )
+      .set('#mask-top .left-tree', { scaleX: 1.5, scaleY: -1.5, opacity: 0, yPercent: -5 })
+      .set('#mask-top .right-tree', { scale: 1.5 , opacity: 0, yPercent: -4 })
+      .to('#mask-top .f2e_logo', { opacity: 1, duration: 0.1 })
+      .to('#second-stage .asking', { opacity: 1, duration: 0.1 })
+      .to('#mask-top .playground', { scale: 0.7684, duration: 0.5 }, '<')
+      .to('#mask-top .playground', { yPercent: 13, duration: 0.5 }, '<')
+      .to('#mask-top .pig, .dog', { scale: 0.7086, duration: 0.5, yPercent: 15 }, '<')
+      .to('#mask-top .cat', { scale: 0.70533, duration: 0.5, yPercent: 15 }, '<')
+      .to('#mask-top .left-tree', { scaleX: 1, scaleY: -1 ,opacity: 1, yPercent: -5, duration: 0.5 }, '<')
+      .to('#mask-top .right-tree', { scale:1, opacity: 1, yPercent: -5, duration: 0.5 }, '<')
+      .to('#mask-top .wait', { duration: 1 })
+      .to('#second-stage .question1', { opacity: 1, xPercent: 0, duration:0.5 })
+      .to('#mask-top .left-tree', { xPercent: 40, yPercent: -10, duration:0.5 }, '<')
+      .to('#mask-top .right-tree', { xPercent: -40, yPercent: -10, duration:0.5 }, '<')
+      .to('#second-stage .question2', { opacity: 1, duration:0.5 })
+      .to('#mask-top .left-tree', { xPercent: 100, yPercent: -20, duration:0.5 }, '<')
+      .to('#mask-top .right-tree', { xPercent: -100, yPercent: -20, duration:0.5 }, '<')
+      .to('#second-stage .question3', { opacity: 1, xPercent: 0, duration:0.5 })
+      .to('#mask-top .left-tree', { xPercent: 100, opacity: 0, yPercent: -30, duration:0.5 }, '<')
+      .to('#mask-top .right-tree', { xPercent: -100, opacity: 0, yPercent: -30, duration:0.5 }, '<')
+
+    timelines.push(t2)
   })
 
   onUnmounted(() => {
-    tl && tl.kill()
-    tl = null
+    timelines && timelines.map(tl => tl && tl.kill())
   })
 }
 
 </script>
 
 <template>
-  <div id="app" class="w-screen overflow-x-hidden flex flex-col">
+  <div id="app" class=" w-screen overflow-x-hidden flex flex-col">
     <NuxtLayout>
-      <MainVisual />
+      <FirstStage />
+      <SecondStage />
       <div
-        class="w-screen h-screen fixed flex justify-center top-0 left-0"
+        id="mask-top"
+        class="wait w-screen h-screen fixed flex justify-center top-0 left-0"
       >
+        <Tree class="left-tree fixed -scale-x-100 2xl:bottom-[-1.21389vw] 2xl:translate-x-[-31.94444vw] " />
+        <Tree class="right-tree fixed 2xl:bottom-[-1.21389vw] 2xl:translate-x-[31.25vw] " />
         <Playground class="playground fixed 2xl:top-[61.73611vw]" />
         <Dog class="dog fixed 2xl:translate-y-[34.86111vw] 2xl:translate-x-[-20.69444vw]" />
         <Cat class="cat fixed 2xl:translate-y-[34.16667vw] 2xl:translate-x-[-0.65972vw]" />
         <Pig class="pig fixed 2xl:translate-y-[39.65278vw] 2xl:translate-x-[20.27778vw]" />
         <Avatar class="right-0 avatar 2xl:translate-x-[-1.04167vw] 2xl:translate-y-[2.08333vw]" />
+        <JoinButton class="fixed 2xl:translate-x-[45.03472vw] 2xl:translate-y-[57.70833vw]" />
+        <F2ELogo class="f2e_logo fixed 2xl:translate-y-[2.08333vw] 2xl:translate-x-[-40.27778vw] " />
         <Map class="fixed 2xl:w-[18.05556vw] 2xl:h-[11.80556vw] 2xl:translate-x-[-38.88889vw] 2xl:translate-y-[57.91667vw]" />
         <SideMenu class="fixed 2xl:left-[-0.34722vw]" />
       </div>
