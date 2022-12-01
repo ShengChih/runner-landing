@@ -204,6 +204,7 @@ if (process.client) {
       <SecondStage />
       <ThirdStage />
       <FourthStage />
+      <FifthStage />
       <div
         id="mask-top"
         class="wait w-screen h-screen fixed flex justify-center top-0 left-0"
