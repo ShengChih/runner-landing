@@ -15,9 +15,7 @@ if (process.client) {
         trigger: '#first-stage',
         pinnedContainer: '#app',
         pin: true,
-        scrub: true,
-        markers: true,
-        id: 't1'
+        scrub: true
       }
     })
 
@@ -52,9 +50,7 @@ if (process.client) {
         trigger: '#second-stage',
         pinnedContainer: '#app',
         pin: true,
-        scrub: true,
-        markers: true,
-        id: 't2'
+        scrub: true
       }
     })
 
@@ -91,10 +87,7 @@ if (process.client) {
         trigger: '#third-stage',
         pin: true,
         pinnedContainer: '#app',
-        scrub: true,
-        markers: true,
-        id: "t3",
-        pinSpacing: true,
+        scrub: true
       }
     })
 
@@ -119,6 +112,82 @@ if (process.client) {
       .to('#mask-top .cat', { scale: 0.282, xPercent: 0, yPercent:30, duration: 0.5 }, '<')
 
     timelines.push(t3)
+
+    const t4 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#fourth-stage',
+        pin: true,
+        pinnedContainer: '#app',
+        scrub: true,
+        markers: true,
+        id: "t4",
+        pinSpacing: true,
+      }
+    })
+
+    t4.set('#fourth-stage .barrier-topic, .card', { opacity: 0 })
+      .set('#fourth-stage .barrier-cards', { yPercent: 100 })
+      .to('#fourth-stage .barrier-topic', { opacity: 1, duration: 0.1 })
+      .to('#fourth-stage .barrier-cards', { yPercent: -80, duration: 3 })
+      .to(
+        '#fourth-stage .card1',
+        {
+          keyframes: {
+            '0%': { opacity: 0 },
+            '50%': { opacity: 1 },
+            '100%': { opacity: 0 }
+          },
+          duration: 1
+        },
+        '<'
+      )
+      .to(
+        '#fourth-stage .card2',
+        {
+          keyframes: {
+            '0%': { opacity: 0 },
+            '50%': { opacity: 1 },
+            '100%': { opacity: 0 }
+          },
+          delay: 0.5,
+          duration: 1
+        },
+        '<'
+      )
+      .to(
+        '#fourth-stage .card3',
+        {
+          keyframes: {
+            '0%': { opacity: 0 },
+            '50%': { opacity: 1 },
+            '100%': { opacity: 0 }
+          },
+          delay: 0.5,
+          duration: 1
+        },
+        '<'
+      )
+      .to('#mask-top .playground', { scale: 0.936, yPercent: 0, duration: 0.5 })
+      .to('#mask-top .dog', { scale: 0.88, xPercent: -3, yPercent: -3, duration: 0.5 }, '<')
+      .to('#mask-top .pig', { scale: 0.907, xPercent: 3, yPercent: -3, duration: 0.5 }, '<')
+      .to('#mask-top .cat', { scale: 0.70, yPercent: 5, duration: 0.5 }, '<')
+      .to('#mask-top .wait', { duration: 0.5 })
+
+    timelines.push(t4)
+
+    //const t5 = gsap.timeline({
+    //  scrollTrigger: {
+    //    trigger: '#fifth-stage',
+    //    pin: true,
+    //    pinnedContainer: '#app',
+    //    scrub: true,
+    //    markers: true,
+    //    id: "t5",
+    //    pinSpacing: true,
+    //  }
+    //})
+//
+    //timelines.push(t5)
   })
 
   onUnmounted(() => {
@@ -134,6 +203,7 @@ if (process.client) {
       <FirstStage />
       <SecondStage />
       <ThirdStage />
+      <FourthStage />
       <div
         id="mask-top"
         class="wait w-screen h-screen fixed flex justify-center top-0 left-0"
