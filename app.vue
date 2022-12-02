@@ -69,7 +69,6 @@ if (process.client) {
       .to('#mask-top .cat', { scale: 0.70533, duration: 0.5, yPercent: 15 }, '<')
       .to('#mask-top .left-tree', { scaleX: 1, scaleY: -1 ,opacity: 1, yPercent: -5, duration: 0.5 }, '<')
       .to('#mask-top .right-tree', { scale:1, opacity: 1, yPercent: -5, duration: 0.5 }, '<')
-      .to('#mask-top .wait', { duration: 1 })
       .to('#second-stage .question1', { opacity: 1, xPercent: 0, duration:0.5 })
       .to('#mask-top .left-tree', { xPercent: 40, yPercent: -10, duration:0.5 }, '<')
       .to('#mask-top .right-tree', { xPercent: -40, yPercent: -10, duration:0.5 }, '<')
@@ -98,13 +97,9 @@ if (process.client) {
       .to('#mask-top .dog', { scale: 1.169, xPercent: -3, yPercent: -3, duration: 0.5 }, '<')
       .to('#mask-top .pig', { scale: 1.169, xPercent: 3, yPercent: -3, duration: 0.5 }, '<')
       .to('#mask-top .cat', { scale: 0.987, yPercent: 5, duration: 0.5 }, '<')
-      .to('#mask-top .wait', { duration: 0.5 })
       .to('#third-stage .third-part1', { opacity: 1, duration: 0.3 })
-      .to('#mask-top .wait', { duration: 0.3 })
       .to('#third-stage .third-part2', { opacity: 1, yPercent: 0, duration: 0.3 })
-      .to('#mask-top .wait', { duration: 0.5 })
       .to('#third-stage .third-part1, .third-part2', { opacity: 0, duration: 1 })
-      .to('#mask-top .wait', { duration: 1 })
       .to('#mask-top .playground', { scale: 0.681, duration: 0.5 }, '<')
       .to('#mask-top .playground', { yPercent: 15, duration: 0.5 }, '<')
       .to('#mask-top .dog', { scale: 0.39, xPercent: 40, yPercent:30, duration: 0.5 }, '<')
@@ -171,23 +166,31 @@ if (process.client) {
       .to('#mask-top .dog', { scale: 0.88, xPercent: -3, yPercent: -3, duration: 0.5 }, '<')
       .to('#mask-top .pig', { scale: 0.907, xPercent: 3, yPercent: -3, duration: 0.5 }, '<')
       .to('#mask-top .cat', { scale: 0.70, yPercent: 5, duration: 0.5 }, '<')
-      .to('#mask-top .wait', { duration: 0.5 })
 
     timelines.push(t4)
 
-    //const t5 = gsap.timeline({
-    //  scrollTrigger: {
-    //    trigger: '#fifth-stage',
-    //    pin: true,
-    //    pinnedContainer: '#app',
-    //    scrub: true,
-    //    markers: true,
-    //    id: "t5",
-    //    pinSpacing: true,
-    //  }
-    //})
-//
-    //timelines.push(t5)
+    const t5 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#fifth-stage',
+        pin: true,
+        pinnedContainer: '#app',
+        scrub: true,
+        markers: true,
+        id: "t5",
+        pinSpacing: true,
+      }
+    })
+
+    t5.set('#fifth-stage .date-card1, .date-card2, .date-card3', { opacity: 0, yPercent: 5 })
+      .to('#fifth-stage .cover-date-line', {
+        width: 0,
+        duration: 2
+      })
+      .to('#fifth-stage .date-card1', { yPercent: 0, opacity: 1, duration: 0.1, delay: 0.1 }, '<')
+      .to('#fifth-stage .date-card2', { yPercent: 0, opacity: 1, duration: 0.1, delay: 0.35 }, '<')
+      .to('#fifth-stage .date-card3', { yPercent: 0, opacity: 1, duration: 0.1, delay: 0.7 }, '<')
+
+    timelines.push(t5)
   })
 
   onUnmounted(() => {

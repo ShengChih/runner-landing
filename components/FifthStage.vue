@@ -2,14 +2,9 @@
   <div id="fifth-stage" class="relative flex justify-center w-full h-screen">
 
     <div class="relative flex flex-col items-center 2xl:h-[560px] 2xl:px-[50.5px] 2xl:translate-y-[84px]">
-      <img
-        alt="date-line"
-        src="~/assets/images/main/date_line.png"
-        class="absolute 2xl:w-[1440px] 2xl:h-[100px] 2xl:translate-y-[468px]"
-      >
       <div class="flex flex-no-wrap h-min 2xl:gap-x-[12.77778vw]">
 
-        <div class="flex flex-col items-center 2xl:w-[302px] 2xl:h-[532px]">
+        <div class="date-card1 flex flex-col items-center 2xl:w-[302px] 2xl:h-[532px]">
           <div class="flex flex-col items-center bg-secondary-default 2xl:p-[1.38889vw]">
             <div class="flex flex-col items-center 2xl:gap-y-[1.04167vw] 2xl:pt-[0.55556vw]">
               <BasePressButton />
@@ -28,7 +23,7 @@
           >
         </div>
 
-        <div class="relative flex flex-col items-center 2xl:w-[331px] 2xl:h-[486px]">
+        <div class="date-card2 relative flex flex-col items-center 2xl:w-[331px] 2xl:h-[486px]">
           <img
             alt="date-weekLing"
             src="~/assets/images/main/date_weekLine.png"
@@ -50,7 +45,7 @@
           </div>
         </div>
 
-        <div class="relative flex flex-col items-center 2xl:w-[318px] 2xl:h-[529px]">
+        <div class="date-card3 relative flex flex-col items-center 2xl:w-[318px] 2xl:h-[529px]">
           <img
             alt="date-weekLing"
             src="~/assets/images/main/date_weekLine.png"
@@ -79,6 +74,14 @@
         </div>
 
       </div>
+      <img
+        alt="date-line"
+        src="~/assets/images/main/date_line.png"
+        class="date-line absolute 2xl:w-[1440px] 2xl:h-[100px] 2xl:translate-y-[468px]"
+      >
+      <div
+        class="absolute right-0 cover-date-line absolute bg-secondary-default 2xl:w-[1440px] 2xl:h-[100px] 2xl:translate-y-[468px]"
+      ></div>
 
     </div>
 

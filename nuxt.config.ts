@@ -6,7 +6,11 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       link: [undefined],
-      meta: [{ name: 'viewport', content: 'width=1024, initial-scale=1' }, { charset: 'utf-8' }]
+      meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }, { charset: 'utf-8' }],
+      htmlAttrs: {
+        lang: "tw"
+      },
+      title: 'The F2E 4th'
     }
   },
 
