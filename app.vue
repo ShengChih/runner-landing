@@ -115,8 +115,7 @@ if (process.client) {
         pinnedContainer: '#app',
         scrub: true,
         markers: true,
-        id: "t4",
-        pinSpacing: true,
+        id: "t4"
       }
     })
 
@@ -175,8 +174,6 @@ if (process.client) {
         pin: true,
         pinnedContainer: '#app',
         scrub: true,
-        markers: true,
-        id: "t5",
         pinSpacing: true,
       }
     })
@@ -191,6 +188,33 @@ if (process.client) {
       .to('#fifth-stage .date-card3', { yPercent: 0, opacity: 1, duration: 0.1, delay: 0.7 }, '<')
 
     timelines.push(t5)
+
+
+    const t6 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#sixth-stage',
+        pin: true,
+        pinnedContainer: '#app',
+        scrub: true,
+        markers: true,
+        id: "t6",
+        pinSpacing: true,
+      }
+    })
+
+    t6.set('#sixth-stage .sixth-text', { scale: 3, opacity: 0 })
+      .set('#sixth-stage .cloud', { xPercent: -150 })
+      .set('#sixth-stage .mumble', { xPercent: 150 })
+      .to('#mask-top .playground', { scale: 0.979, yPercent: 0, duration: 0.5 })
+      .to('#mask-top .dog', { scale: 1.169, xPercent: -3, yPercent: -3, duration: 0.5 }, '<')
+      .to('#mask-top .pig', { scale: 1.169, xPercent: 3, yPercent: -3, duration: 0.5 }, '<')
+      .to('#mask-top .cat', { scale: 0.987, yPercent: 5, duration: 0.5 }, '<')
+      .to('#sixth-stage .cloud', { xPercent: 0, duration: 1 })
+      .to('#sixth-stage .mumble', { xPercent: 0, duration: 1 }, '<')
+      .to('#sixth-stage .sixth-text', { scale: 1, opacity: 1 }, '<')
+      .to('#sixth-stage .cloud, .mumble, .sixth-text', { opacity: 0, delay: 1 })
+
+    timelines.push(t6)
   })
 
   onUnmounted(() => {
@@ -208,6 +232,7 @@ if (process.client) {
       <ThirdStage />
       <FourthStage />
       <FifthStage />
+      <SixthStage />
       <div
         id="mask-top"
         class="wait w-screen h-screen fixed flex justify-center top-0 left-0"
