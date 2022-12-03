@@ -14,10 +14,10 @@ const progressStyle = computed(() => {
     <img
       alt="loading-gif"
       src="~/assets\images\loading.gif"
-      class="2xl:w-[190px] 2xl:h-[122px]"
+      class="2xl:w-[13.19444vw] 2xl:h-[8.47222vw]"
     >
-    <div class="border-primary-default 2xl:w-full 2xl:h-[16px] 2xl:rounded-[20px]">
-      <div :style="progressStyle" class="bg-primary-default 2xl:h-[16px] 2xl:rounded-[20px]"></div>
+    <div class="border-primary-default 2xl:w-full 2xl:h-[1.11111vw] 2xl:rounded-[20PX]">
+      <div :style="progressStyle" class="bg-primary-default 2xl:h-[1.11111vw] 2xl:rounded-[20PX]"></div>
     </div>
   </div>
 </template>

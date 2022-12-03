@@ -5,7 +5,7 @@
     <img
       src="~/assets/images/main/finish.png"
       alt="finish-point"
-      class="finish-point absolute 2xl:w-[1430px] 2xl:h-[1080px]"
+      class="finish-point absolute 2xl:w-[99.30556vw] 2xl:h-[75vw]"
     >
   </div>
 </template>

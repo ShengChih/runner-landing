@@ -27,7 +27,7 @@ if (process.client) {
         return
       }
 
-      currentTime.value +=  Math.floor(Math.random() * 100)
+      currentTime.value +=  Math.floor(Math.random() * 150)
       progress.value = (currentTime.value / maxTime.value) * 100
     }, 100)
   }
@@ -209,7 +209,7 @@ if (process.client) {
       .to('#fifth-stage .date-card1', { yPercent: 0, opacity: 1, duration: 0.3 })
       .to('#fifth-stage .date-card2', { yPercent: 0, opacity: 1, duration: 0.3 })
       .to('#fifth-stage .date-card3', { yPercent: 0, opacity: 1, duration: 0.3 })
-      .to('#fifth-stage', { opacity: 0, duration: 0.3 })
+      .to('#fifth-stage', { opacity: 0, duration: 3, delay: 1 })
 
     timelines.push(t5)
 
@@ -306,8 +306,8 @@ if (process.client) {
       .set('#ninth-stage .left-cloud', { scale: 1.3, xPercent: -100, opacity: 0 })
       .set('#ninth-stage .right-cloud', { scale:1.3, xPercent: 100, opacity: 0 })
       .set('#ninth-stage .finish-point', { opacity: 0 })
-      .to('#ninth-stage .left-cloud', { opacity:1, duration: 0 })
-      .to('#ninth-stage .right-cloud', { opacity:1, duration: 0 }, '<')
+      .to('#ninth-stage .left-cloud', { opacity:1, duration: 0.2 })
+      .to('#ninth-stage .right-cloud', { opacity:1, duration: 0.2 }, '<')
       .to('#ninth-stage .left-cloud', { scale: 1, duration: 2, xPercent: 20, yPercent: -50 }, '<')
       .to('#ninth-stage .right-cloud', { scale: 1, duration: 2, xPercent: -20, yPercent: -50 }, '<')
       .to('#ninth-stage .finish-point', { opacity: 1, duration: 0.2 })
@@ -376,20 +376,20 @@ if (process.client) {
         <img
           alt="finish-line"
           src="~/assets/images/main/finishLine_l.png"
-          class="finish-line finish-line-l absolute 2xl:translate-x-[-230px] 2xl:translate-y-[731px] 2xl:w-[975px] 2xl:h-[129.5px]"
+          class="finish-line finish-line-l absolute 2xl:translate-x-[-15.97222vw] 2xl:translate-y-[50.76389vw] 2xl:w-[95.20833vw] 2xl:h-[8.99306vw]"
         >
         <img
           alt="finish-line"
           src="~/assets/images/main/finishLine_r.png"
-          class="finish-line finish-line-r absolute 2xl:translate-x-[510px] 2xl:translate-y-[731px] 2xl:w-[975px] 2xl:h-[129.5px]"
+          class="finish-line finish-line-r absolute 2xl:translate-x-[35.41667vw] 2xl:translate-y-[50.76389vw] 2xl:w-[95.20833vw] 2xl:h-[8.99306vw]"
         >
         <Map class="map fixed 2xl:w-[18.05556vw] 2xl:h-[11.80556vw] 2xl:translate-x-[-38.88889vw] 2xl:translate-y-[57.91667vw]" />
         <SideMenu class="fixed 2xl:left-[-0.34722vw]" />
-        <FinishLogo class="finish-logo fixed 2xl:translate-y-[124px] "/>
+        <FinishLogo class="finish-logo fixed 2xl:translate-y-[8.61111vw] "/>
       </div>
 
       <div v-if="isLoading" class="fixed w-screen h-screen top-0 left-0 bg-secondary-default flex items-center justify-center">
-        <BaseLoading :progress="progress" class="2xl:w-[466px] 2xl:h-[238px]" />
+        <BaseLoading :progress="progress" class="2xl:w-[32.36111vw] 2xl:h-[16.52778vw]" />
       </div>
     </NuxtLayout>
   </div>
