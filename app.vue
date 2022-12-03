@@ -2,14 +2,39 @@
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+const isLoading = ref(true)
+const maxTime = ref(3000)
+const currentTime = ref(0)
+const progress = ref(0)
+const timer = ref(null)
+
 if (process.client) {
   gsap.registerPlugin(ScrollTrigger)
 
   const timelines: ReturnType<typeof gsap.timeline>[] = []
 
-  console.log(window)
+  const clearProgress = () => {
+    if (timer.value) {
+      clearInterval(timer.value)
+    }
+  }
+
+  const updateProgress = () => {
+    timer.value = setInterval(() => {
+      if (!isLoading.value || progress.value > maxTime.value) {
+        progress.value = 100
+        clearProgress()
+        return
+      }
+
+      currentTime.value +=  Math.floor(Math.random() * 100)
+      progress.value = (currentTime.value / maxTime.value) * 100
+    }, 100)
+  }
 
   onMounted(() => {
+    updateProgress()
+
     const t1 = gsap.timeline({
       scrollTrigger: {
         trigger: '#first-stage',
@@ -242,7 +267,6 @@ if (process.client) {
         scrub: true,
         markers: true,
         id: "t8",
-        pinSpacing: true,
       }
     })
 
@@ -260,6 +284,7 @@ if (process.client) {
       .to('#eighth-stage .logo1', { opacity: 1, yPercent: 0, duration: 0.5, delay: 0 })
       .to('#eighth-stage .logo2', { opacity: 1, yPercent: 0, duration: 0.5, delay: 0.3 })
       .to('#eighth-stage .logo3', { opacity: 1, yPercent: 0, duration: 0.5, delay: 0.3 })
+      .to('#eighth-stage', { opacity: 0, xPercent: 150, duration: 0.5, delay: 1 })
 
     timelines.push(t8)
 
@@ -308,6 +333,10 @@ if (process.client) {
       .to('#mask-top .base-join-btn', { opacity: 0, duration: 0.5 }, '<')
 
     timelines.push(t9)
+
+    setTimeout(() => {
+      isLoading.value = false;
+    }, maxTime.value)
   })
 
   onUnmounted(() => {
@@ -359,6 +388,9 @@ if (process.client) {
         <FinishLogo class="finish-logo fixed 2xl:translate-y-[124px] "/>
       </div>
 
+      <div v-if="isLoading" class="fixed w-screen h-screen top-0 left-0 bg-secondary-default flex items-center justify-center">
+        <BaseLoading :progress="progress" class="2xl:w-[466px] 2xl:h-[238px]" />
+      </div>
     </NuxtLayout>
   </div>
 </template>
