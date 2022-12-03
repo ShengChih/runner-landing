@@ -32,12 +32,12 @@
         </div>
         <div class="flex flex-col">
           <h4 class="text-highlight-default 2xl:h-[45px] 2xl:leading-[45px]">獎項</h4>
-          <p class="text-primary-default 2xl:leading-[34px] 2xl:h-[126px]">
-            1. 初選佳作 共六十位 數位獎狀<br>
-            2. 個人企業獎 共六位 NTD 3,000 /位<br>
-            3. 團體企業獎 共三組 NTD 10,000 /組<br>
-            4. 以上皆提供完賽數位獎狀
-          </p>
+          <ol type="1" class="text-primary-default 2xl:leading-[34px] 2xl:h-[126px]">
+            <li>1. 初選佳作 共六十位 數位獎狀</li>
+            <li>2. 個人企業獎 共六位 NTD <strong class="text-highlight-default">3,000</strong> /位</li>
+            <li>3. 團體企業獎 共三組 NTD <strong class="text-highlight-default">10,000</strong> /組</li>
+            <li>4. 以上皆提供完賽數位獎狀</li>
+          </ol>
         </div>
       </div>
 
