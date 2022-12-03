@@ -94,9 +94,9 @@ if (process.client) {
       .set('#third-stage .third-part2', { opacity: 0, yPercent: 15 })
       .to('#second-stage', { opacity: 0, duration: 0.1 })
       .to('#mask-top .playground', { scale: 0.979, yPercent: 0, duration: 0.5 }, '<')
-      .to('#mask-top .dog', { scale: 1.169, xPercent: -3, yPercent: -3, duration: 0.5 }, '<')
+      .to('#mask-top .dog', { scale: 1.169, xPercent: -10, yPercent: -5, duration: 0.5 }, '<')
       .to('#mask-top .pig', { scale: 1.169, xPercent: 3, yPercent: -3, duration: 0.5 }, '<')
-      .to('#mask-top .cat', { scale: 0.987, yPercent: 5, duration: 0.5 }, '<')
+      .to('#mask-top .cat', { scale: 0.987, yPercent: -5, duration: 0.5 }, '<')
       .to('#third-stage .third-part1', { opacity: 1, duration: 0.3 })
       .to('#third-stage .third-part2', { opacity: 1, yPercent: 0, duration: 0.3 })
       .to('#third-stage .third-part1, .third-part2', { opacity: 0, duration: 1 })
@@ -113,9 +113,7 @@ if (process.client) {
         trigger: '#fourth-stage',
         pin: true,
         pinnedContainer: '#app',
-        scrub: true,
-        markers: true,
-        id: "t4"
+        scrub: true
       }
     })
 
@@ -162,8 +160,8 @@ if (process.client) {
         '<'
       )
       .to('#mask-top .playground', { scale: 0.936, yPercent: 0, duration: 0.5 })
-      .to('#mask-top .dog', { scale: 0.88, xPercent: -3, yPercent: -3, duration: 0.5 }, '<')
-      .to('#mask-top .pig', { scale: 0.907, xPercent: 3, yPercent: -3, duration: 0.5 }, '<')
+      .to('#mask-top .dog', { scale: 0.88, xPercent: -3, yPercent: 1, duration: 0.5 }, '<')
+      .to('#mask-top .pig', { scale: 0.907, xPercent: 0, yPercent: -3, duration: 0.5 }, '<')
       .to('#mask-top .cat', { scale: 0.70, yPercent: 5, duration: 0.5 }, '<')
 
     timelines.push(t4)
@@ -173,8 +171,7 @@ if (process.client) {
         trigger: '#fifth-stage',
         pin: true,
         pinnedContainer: '#app',
-        scrub: true,
-        pinSpacing: true,
+        scrub: true
       }
     })
 
@@ -183,9 +180,10 @@ if (process.client) {
         width: 0,
         duration: 2
       })
-      .to('#fifth-stage .date-card1', { yPercent: 0, opacity: 1, duration: 0.1, delay: 0.1 }, '<')
-      .to('#fifth-stage .date-card2', { yPercent: 0, opacity: 1, duration: 0.1, delay: 0.35 }, '<')
-      .to('#fifth-stage .date-card3', { yPercent: 0, opacity: 1, duration: 0.1, delay: 0.7 }, '<')
+      .to('#fifth-stage .date-card1', { yPercent: 0, opacity: 1, duration: 0.3 })
+      .to('#fifth-stage .date-card2', { yPercent: 0, opacity: 1, duration: 0.3 })
+      .to('#fifth-stage .date-card3', { yPercent: 0, opacity: 1, duration: 0.3 })
+      .to('#fifth-stage', { opacity: 0, duration: 0.3 })
 
     timelines.push(t5)
 
@@ -195,31 +193,80 @@ if (process.client) {
         trigger: '#sixth-stage',
         pin: true,
         pinnedContainer: '#app',
-        scrub: true,
-        markers: true,
-        id: "t6",
-        pinSpacing: true,
+        scrub: true
       }
     })
 
     t6.set('#sixth-stage .sixth-text', { scale: 3, opacity: 0 })
       .set('#sixth-stage .cloud', { xPercent: -150 })
       .set('#sixth-stage .mumble', { xPercent: 150 })
-      .to('#mask-top .playground', { scale: 0.979, yPercent: 0, duration: 0.5 })
-      .to('#mask-top .dog', { scale: 1.169, xPercent: -3, yPercent: -3, duration: 0.5 }, '<')
+      .to('#mask-top .playground', { scale: 0.979, yPercent: 0, duration: 0.5 }, '<')
+      .to('#mask-top .dog', { scale: 1.169, xPercent: -10, yPercent: -5, duration: 0.5 }, '<')
       .to('#mask-top .pig', { scale: 1.169, xPercent: 3, yPercent: -3, duration: 0.5 }, '<')
-      .to('#mask-top .cat', { scale: 0.987, yPercent: 5, duration: 0.5 }, '<')
+      .to('#mask-top .cat', { scale: 0.987, yPercent: -5, duration: 0.5 }, '<')
       .to('#sixth-stage .cloud', { xPercent: 0, duration: 1 })
       .to('#sixth-stage .mumble', { xPercent: 0, duration: 1 }, '<')
       .to('#sixth-stage .sixth-text', { scale: 1, opacity: 1 }, '<')
-      .to('#sixth-stage .cloud, .mumble, .sixth-text', { opacity: 0, delay: 1 })
+      .to('#sixth-stage .cloud, .mumble, .sixth-text', { opacity: 0 })
 
     timelines.push(t6)
+
+    const t7 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#seventh-stage',
+        pin: true,
+        pinnedContainer: '#app',
+        scrub: true
+      }
+    })
+
+    t7.set('#seventh-stage .topic', { opacity: 0 })
+      .set('#seventh-stage .award-info', { xPercent: -100, opacity: 0 })
+      .to('#seventh-stage .topic', { opacity: 0, duration: 0.2 })
+      .to('#seventh-stage .award-info', { xPercent: 0, opacity: 1, duration: 1 }, '<')
+      .to('#seventh-stage .award-light', { rotate: -1240, duration: 0.5, delay: 0.5 }, '<')
+      .to('#mask-top .playground', { scale: 0.715, yPercent: 13, duration: 0.5 }, '<')
+      .to('#mask-top .dog', { scale: 0.8245, xPercent: -10, yPercent: 10, duration: 0.5 }, '<')
+      .to('#mask-top .pig', { scale: 0.871, xPercent: 3, yPercent: 5, duration: 0.5 }, '<')
+      .to('#mask-top .cat', { scale: 0.5705, yPercent: 13, duration: 0.5 }, '<')
+      .to('#seventh-stage', { opacity: 0, xPercent: 150, duration: 0.5, delay: 1 })
+
+    timelines.push(t7)
+
+    const t8 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#eighth-stage',
+        pin: true,
+        pinnedContainer: '#app',
+        scrub: true,
+        markers: true,
+        id: "t8",
+        pinSpacing: true,
+      }
+    })
+
+    t8.set('#eighth-stage .topic', { opacity: 0 })
+      .set('#eighth-stage .left-tree', { xPercent: -40, yPercent: 10, scale: 1.5, opacity: 0 })
+      .set('#eighth-stage .right-tree', { xPercent: 40, yPercent: 10, scale: 1.5, opacity: 0 })
+      .set('#eighth-stage .logo1, #eighth-stage .logo2, #eighth-stage .logo3', { opacity: 0, yPercent: 30 })
+      .to('#mask-top .dog', { scale: 0.927, xPercent: -10, yPercent: 5, duration: 0.5 })
+      .to('#mask-top .pig', { scale: 0.692, xPercent: 3, yPercent: 5, duration: 0.5 }, '<')
+      .to('#mask-top .cat', { scale: 0.646, yPercent: 13, duration: 0.5 }, '<')
+      .to('#eighth-stage .topic', { opacity: 1 }, '<')
+      .to('#eighth-stage .left-tree, #eighth-stage .right-tree', { opacity: 1, duration: 0 })
+      .to('#eighth-stage .left-tree, #eighth-stage .right-tree', { scale: 1, duration: 0.7 }, '<')
+      .to('#eighth-stage .left-tree, #eighth-stage .right-tree', { xPercent: 0, yPercent: 0, duration: 1}, '<')
+      .to('#eighth-stage .logo1', { opacity: 1, yPercent: 0, duration: 0.5, delay: 0 })
+      .to('#eighth-stage .logo2', { opacity: 1, yPercent: 0, duration: 0.5, delay: 0.3 })
+      .to('#eighth-stage .logo3', { opacity: 1, yPercent: 0, duration: 0.5, delay: 0.3 })
+
+    timelines.push(t8)
   })
 
   onUnmounted(() => {
     timelines && timelines.map(tl => tl && tl.kill())
   })
+
 }
 
 </script>
@@ -233,6 +280,9 @@ if (process.client) {
       <FourthStage />
       <FifthStage />
       <SixthStage />
+      <SeventhStage />
+      <EighthStage />
+
       <div
         id="mask-top"
         class="wait w-screen h-screen fixed flex justify-center top-0 left-0"

@@ -8,6 +8,7 @@
   "eslint.run": "onSave",
   "cSpell.words": [
     "attributify",
+    "blockstudio",
     "commitlint",
     "composables",
     "cssnano",
@@ -16,6 +17,7 @@
     "genjyuugothic",
     "genjyuugothicx",
     "gsap",
+    "kdanmobile",
     "Nuxt",
     "nuxtjs",
     "pinia",
@@ -23,6 +25,7 @@
     "purgecss",
     "pxtorem",
     "tailwindcss",
+    "titansoft",
     "truetype",
     "vueuse",
     "windi",
