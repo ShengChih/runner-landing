@@ -163,6 +163,7 @@ if (process.client) {
       .to('#mask-top .dog', { scale: 0.88, xPercent: -3, yPercent: 1, duration: 0.5 }, '<')
       .to('#mask-top .pig', { scale: 0.907, xPercent: 0, yPercent: -3, duration: 0.5 }, '<')
       .to('#mask-top .cat', { scale: 0.70, yPercent: 5, duration: 0.5 }, '<')
+      .to('#fourth-stage .barrier-topic', { opacity: 0, duration: 0.1, delay: 1 })
 
     timelines.push(t4)
 
@@ -261,6 +262,43 @@ if (process.client) {
       .to('#eighth-stage .logo3', { opacity: 1, yPercent: 0, duration: 0.5, delay: 0.3 })
 
     timelines.push(t8)
+
+    const t9 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#ninth-stage',
+        pin: true,
+        pinnedContainer: '#app',
+        scrub: true,
+        markers: true,
+        id: "t9",
+        pinSpacing: true,
+      }
+    })
+
+    t9.set('#mask-top .finish-line', { opacity: 0 })
+      .set('#ninth-stage .finish-point', { scale: 1.5 })
+      .set('#ninth-stage .left-cloud', { scale: 1.3, xPercent: -100, opacity: 0 })
+      .set('#ninth-stage .right-cloud', { scale:1.3, xPercent: 100, opacity: 0 })
+      .set('#ninth-stage .finish-point', { opacity: 0 })
+      .to('#ninth-stage .left-cloud', { opacity:1, duration: 0 })
+      .to('#ninth-stage .right-cloud', { opacity:1, duration: 0 }, '<')
+      .to('#ninth-stage .left-cloud', { scale: 1, duration: 2, xPercent: 20, yPercent: -50 }, '<')
+      .to('#ninth-stage .right-cloud', { scale: 1, duration: 2, xPercent: -20, yPercent: -50 }, '<')
+      .to('#ninth-stage .finish-point', { opacity: 1, duration: 0.2 })
+      .to('#mask-top .finish-line', { opacity: 1, duration: 0 })
+      .to('#mask-top .dog', { scale: 1.4, xPercent: 0, yPercent: 0, duration: 2 })
+      .to('#mask-top .pig', { scale: 1.4, xPercent: 0, yPercent: 0, duration: 2 }, '<')
+      .to('#mask-top .cat', { scale: 1.4, xPercent: 0, yPercent: 0, duration: 2 }, '<')
+      .to('#ninth-stage .finish-point', { scale: 1, duration: 2 })
+      .to('#mask-top .finish-line-l', { opacity: 1, duration: 0.1 }, '<')
+      .to('#mask-top .finish-line-r', { opacity: 1, duration: 0.1 }, '<')
+      .to('#mask-top .finish-line-l', { xPercent: -23.6, duration: 1 })
+      .to('#mask-top .finish-line-l', { rotate: -10, duration: 0.5 })
+      .to('#mask-top .finish-line-r', { rotate: 10, duration: 0.5 }, '<')
+      .to('#mask-top .finish-line-l', { xPercent: -200, duration: 5 })
+      .to('#mask-top .finish-line-r', { xPercent: 200, duration: 5 }, '<')
+
+    timelines.push(t9)
   })
 
   onUnmounted(() => {
@@ -282,6 +320,7 @@ if (process.client) {
       <SixthStage />
       <SeventhStage />
       <EighthStage />
+      <NinthStage />
 
       <div
         id="mask-top"
@@ -296,6 +335,16 @@ if (process.client) {
         <Avatar class="right-0 avatar 2xl:translate-x-[-1.04167vw] 2xl:translate-y-[2.08333vw]" />
         <JoinButton class="fixed 2xl:translate-x-[45.03472vw] 2xl:translate-y-[57.70833vw]" />
         <F2ELogo class="f2e_logo fixed 2xl:translate-y-[2.08333vw] 2xl:translate-x-[-40.27778vw] " />
+        <img
+          alt="finish-line"
+          src="~/assets/images/main/finishLine_l.png"
+          class="finish-line finish-line-l absolute 2xl:translate-x-[-230px] 2xl:translate-y-[731px] 2xl:w-[975px] 2xl:h-[129.5px]"
+        >
+        <img
+          alt="finish-line"
+          src="~/assets/images/main/finishLine_r.png"
+          class="finish-line finish-line-r absolute 2xl:translate-x-[510px] 2xl:translate-y-[731px] 2xl:w-[975px] 2xl:h-[129.5px]"
+        >
         <Map class="fixed 2xl:w-[18.05556vw] 2xl:h-[11.80556vw] 2xl:translate-x-[-38.88889vw] 2xl:translate-y-[57.91667vw]" />
         <SideMenu class="fixed 2xl:left-[-0.34722vw]" />
       </div>

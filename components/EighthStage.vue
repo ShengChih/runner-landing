@@ -1,5 +1,16 @@
 <template>
   <div id="eighth-stage" class="relative w-full h-screen flex flex-col items-center">
+    <img
+      alt="tree"
+      src="~/assets/images/bg/bg_decorate_04.png"
+      class="left-tree absolute 2xl:translate-x-[-334.5px] 2xl:translate-y-[484px] 2xl:w-[331px]"
+    >
+
+    <img
+      alt="tree"
+      src="~/assets/images/bg/bg_decorate_08.png"
+      class="right-tree absolute 2xl:translate-x-[307px] 2xl:translate-y-[510px] 2xl:w-[342px]"
+    >
 
     <div class="topic absolute 2xl:translate-y-[40px] flex flex-no-wrap 2xl:w-[466px] 2xl:h-[10.48611vw]">
       <h2 class="absolute 2xl:translate-y-[1.80694vw] 2xl:translate-x-[108.06px] text-center text-primary-default tracking-wider 2xl:h-[5.20833vw] 2xl:leading-[5.20833vw]">
@@ -91,16 +102,6 @@
       </div>
     </div>
 
-    <img
-      alt="tree"
-      src="~/assets/images/bg/bg_decorate_04.png"
-      class="left-tree absolute 2xl:translate-x-[-334.5px] 2xl:translate-y-[484px] 2xl:w-[331px]"
-    >
-
-    <img
-      alt="tree"
-      src="~/assets/images/bg/bg_decorate_08.png"
-      class="right-tree absolute 2xl:translate-x-[307px] 2xl:translate-y-[510px] 2xl:w-[342px]"
-    >
+    
   </div>
 </template>
