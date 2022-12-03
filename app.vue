@@ -41,7 +41,7 @@ if (process.client) {
       .to('#first-stage .left-cloud', { scale: 0, opacity: 0, duration: 2, xPercent: 100, yPercent: -50 }, '<')
       .to('#first-stage .right-cloud', { scale: 0, opacity: 0, duration: 2, xPercent: -100, yPercent: -50 }, '<')
       .to('#first-stage .traffic-light', { opacity: 0 }, '<')
-      .to('#mask-top .f2e_logo', { opacity: 1 })
+      .to('#mask-top .f2e-logo', { opacity: 1 })
 
     timelines.push(t1)
 
@@ -58,10 +58,10 @@ if (process.client) {
       .set('#second-stage .question1', { opacity: 0, xPercent: -10 } )
       .set('#second-stage .question2', { opacity: 0 } )
       .set('#second-stage .question3', { opacity: 0, xPercent: 10 } )
-      .set('#mask-top .f2e_logo', { opacity: 0 } )
+      .set('#mask-top .f2e-logo', { opacity: 0 } )
       .set('#mask-top .left-tree', { scaleX: 1.5, scaleY: -1.5, opacity: 0, yPercent: -5 })
       .set('#mask-top .right-tree', { scale: 1.5 , opacity: 0, yPercent: -4 })
-      .to('#mask-top .f2e_logo', { opacity: 1, duration: 0.1 })
+      .to('#mask-top .f2e-logo', { opacity: 1, duration: 0.1 })
       .to('#second-stage .asking', { opacity: 1, duration: 0.1 })
       .to('#mask-top .playground', { scale: 0.7684, duration: 0.5 }, '<')
       .to('#mask-top .playground', { yPercent: 13, duration: 0.5 }, '<')
@@ -275,7 +275,8 @@ if (process.client) {
       }
     })
 
-    t9.set('#mask-top .finish-line', { opacity: 0 })
+    t9.set('#mask-top .finish-logo', { opacity: 0, yPercent: 30 })
+      .set('#mask-top .finish-line', { opacity: 0 })
       .set('#ninth-stage .finish-point', { scale: 1.5 })
       .set('#ninth-stage .left-cloud', { scale: 1.3, xPercent: -100, opacity: 0 })
       .set('#ninth-stage .right-cloud', { scale:1.3, xPercent: 100, opacity: 0 })
@@ -286,8 +287,8 @@ if (process.client) {
       .to('#ninth-stage .right-cloud', { scale: 1, duration: 2, xPercent: -20, yPercent: -50 }, '<')
       .to('#ninth-stage .finish-point', { opacity: 1, duration: 0.2 })
       .to('#mask-top .finish-line', { opacity: 1, duration: 0 })
-      .to('#mask-top .dog', { scale: 1.4, xPercent: 0, yPercent: 0, duration: 2 })
-      .to('#mask-top .pig', { scale: 1.4, xPercent: 0, yPercent: 0, duration: 2 }, '<')
+      .to('#mask-top .dog', { scale: 1.4, xPercent: -55, yPercent: 0, duration: 2 })
+      .to('#mask-top .pig', { scale: 1.4, xPercent: 55, yPercent: 0, duration: 2 }, '<')
       .to('#mask-top .cat', { scale: 1.4, xPercent: 0, yPercent: 0, duration: 2 }, '<')
       .to('#ninth-stage .finish-point', { scale: 1, duration: 2 })
       .to('#mask-top .finish-line-l', { opacity: 1, duration: 0.1 }, '<')
@@ -297,6 +298,14 @@ if (process.client) {
       .to('#mask-top .finish-line-r', { rotate: 10, duration: 0.5 }, '<')
       .to('#mask-top .finish-line-l', { xPercent: -200, duration: 5 })
       .to('#mask-top .finish-line-r', { xPercent: 200, duration: 5 }, '<')
+      .to('#mask-top .dog', { scale: 2, opacity: 0, duration: 3 },)
+      .to('#mask-top .pig', { scale: 2, opacity: 0, duration: 3 }, '<')
+      .to('#mask-top .cat', { scale: 2, opacity: 0, duration: 3 }, '<')
+      .to('#ninth-stage', { opacity: 0, duration: 3 })
+      .to('#mask-top .f2e-logo', { opacity: 0, duration: 3 })
+      .to('#mask-top .finish-logo', { opacity: 1, yPercent: 0, duration: 0.5 }, '<')
+      .to('#mask-top .map', { opacity: 0, duration: 0.5 }, '<')
+      .to('#mask-top .base-join-btn', { opacity: 0, duration: 0.5 }, '<')
 
     timelines.push(t9)
   })
@@ -333,8 +342,8 @@ if (process.client) {
         <Cat class="cat fixed 2xl:translate-y-[34.16667vw] 2xl:translate-x-[-0.65972vw]" />
         <Pig class="pig fixed 2xl:translate-y-[39.65278vw] 2xl:translate-x-[20.27778vw]" />
         <Avatar class="right-0 avatar 2xl:translate-x-[-1.04167vw] 2xl:translate-y-[2.08333vw]" />
-        <JoinButton class="fixed 2xl:translate-x-[45.03472vw] 2xl:translate-y-[57.70833vw]" />
-        <F2ELogo class="f2e_logo fixed 2xl:translate-y-[2.08333vw] 2xl:translate-x-[-40.27778vw] " />
+        <JoinButton class="base-join-btn fixed 2xl:translate-x-[45.03472vw] 2xl:translate-y-[57.70833vw]" />
+        <F2ELogo class="f2e-logo fixed 2xl:translate-y-[2.08333vw] 2xl:translate-x-[-40.27778vw] 2xl:w-[13.88889vw] 2xl:h-[10.34097vw]" />
         <img
           alt="finish-line"
           src="~/assets/images/main/finishLine_l.png"
@@ -345,9 +354,11 @@ if (process.client) {
           src="~/assets/images/main/finishLine_r.png"
           class="finish-line finish-line-r absolute 2xl:translate-x-[510px] 2xl:translate-y-[731px] 2xl:w-[975px] 2xl:h-[129.5px]"
         >
-        <Map class="fixed 2xl:w-[18.05556vw] 2xl:h-[11.80556vw] 2xl:translate-x-[-38.88889vw] 2xl:translate-y-[57.91667vw]" />
+        <Map class="map fixed 2xl:w-[18.05556vw] 2xl:h-[11.80556vw] 2xl:translate-x-[-38.88889vw] 2xl:translate-y-[57.91667vw]" />
         <SideMenu class="fixed 2xl:left-[-0.34722vw]" />
+        <FinishLogo class="finish-logo fixed 2xl:translate-y-[124px] "/>
       </div>
+
     </NuxtLayout>
   </div>
 </template>
