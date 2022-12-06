@@ -367,25 +367,25 @@ if (process.client) {
         <Tree class="left-tree fixed -scale-x-100 2xl:bottom-[-1.21389vw] 2xl:translate-x-[-31.94444vw] " />
         <Tree class="right-tree fixed 2xl:bottom-[-1.21389vw] 2xl:translate-x-[31.25vw] " />
         <Playground class="playground fixed 2xl:top-[61.73611vw]" />
-        <Dog class="dog fixed 2xl:translate-y-[34.86111vw] 2xl:translate-x-[-20.69444vw]" />
-        <Cat class="cat fixed 2xl:translate-y-[34.16667vw] 2xl:translate-x-[-0.65972vw]" />
-        <Pig class="pig fixed 2xl:translate-y-[39.65278vw] 2xl:translate-x-[20.27778vw]" />
-        <Avatar class="right-0 avatar 2xl:translate-x-[-1.04167vw] 2xl:translate-y-[2.08333vw]" />
-        <JoinButton class="base-join-btn fixed 2xl:translate-x-[45.03472vw] 2xl:translate-y-[57.70833vw]" />
-        <F2ELogo class="f2e-logo fixed 2xl:translate-y-[2.08333vw] 2xl:translate-x-[-40.27778vw] 2xl:w-[13.88889vw] 2xl:h-[10.34097vw]" />
+        <Dog class="dog fixed transform 2xl:translate-y-[34.86111vw] 2xl:translate-x-[-20.69444vw]" />
+        <Cat class="cat fixed transform 2xl:translate-y-[34.16667vw] 2xl:translate-x-[-0.65972vw]" />
+        <Pig class="pig fixed transform 2xl:translate-y-[39.65278vw] 2xl:translate-x-[20.27778vw]" />
+        <Avatar class="right-0 avatar  transform 2xl:translate-y-[2.08333vw] 2xl:translate-x-[-1.04167vw]" />
+        <JoinButton class="base-join-btn fixed transform 2xl:translate-y-[57.70833vw] 2xl:translate-x-[45.03472vw] " />
+        <F2ELogo class="f2e-logo fixed transform 2xl:translate-y-[2.08333vw] 2xl:translate-x-[-40.27778vw] 2xl:w-[13.88889vw] 2xl:h-[10.34097vw]" />
         <img
           alt="finish-line"
           src="~/assets/images/main/finishLine_l.png"
-          class="finish-line finish-line-l absolute 2xl:translate-x-[-15.97222vw] 2xl:translate-y-[50.76389vw] 2xl:w-[95.20833vw] 2xl:h-[8.99306vw]"
+          class="finish-line finish-line-l absolute 2xl:translate-x-[-15.97222vw] transform 2xl:translate-y-[50.76389vw] 2xl:w-[95.20833vw] 2xl:h-[8.99306vw]"
         >
         <img
           alt="finish-line"
           src="~/assets/images/main/finishLine_r.png"
-          class="finish-line finish-line-r absolute 2xl:translate-x-[35.41667vw] 2xl:translate-y-[50.76389vw] 2xl:w-[95.20833vw] 2xl:h-[8.99306vw]"
+          class="finish-line finish-line-r absolute 2xl:translate-x-[35.41667vw] transform 2xl:translate-y-[50.76389vw] 2xl:w-[95.20833vw] 2xl:h-[8.99306vw]"
         >
-        <Map class="map fixed 2xl:w-[18.05556vw] 2xl:h-[11.80556vw] 2xl:translate-x-[-38.88889vw] 2xl:translate-y-[57.91667vw]" />
+        <Map class="map fixed 2xl:w-[18.05556vw] 2xl:h-[11.80556vw] 2xl:translate-x-[-38.88889vw] transform 2xl:translate-y-[57.91667vw]" />
         <SideMenu class="fixed 2xl:left-[-0.34722vw]" />
-        <FinishLogo class="finish-logo fixed 2xl:translate-y-[8.61111vw] "/>
+        <FinishLogo class="finish-logo fixed transform 2xl:translate-y-[8.61111vw] "/>
       </div>
 
       <div v-if="isLoading" class="fixed w-screen h-screen top-0 left-0 bg-secondary-default flex items-center justify-center">

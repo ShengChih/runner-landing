@@ -5,7 +5,7 @@
     src="~/assets/images/bg/bg_talking_l.png"
   >
   <img
-    class="h-full grow"
+    class="h-full grow flex-grow"
     alt="tak_middle"
     src="~/assets/images/bg/bg_talking_c.png"
   >

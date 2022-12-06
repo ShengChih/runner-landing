@@ -1,15 +1,15 @@
 <template>
   <div id="seventh-stage" class="relative w-full h-screen flex flex-col items-center">
 
-    <div class="topic absolute 2xl:translate-y-[2.77778vw] flex flex-no-wrap 2xl:w-[43.54167vw] 2xl:h-[10.48611vw]">
-      <h2 class="absolute 2xl:translate-y-[1.80694vw] 2xl:translate-x-[5.37708vw] text-center text-primary-default tracking-wider 2xl:h-[5.20833vw] 2xl:leading-[5.20833vw]">
+    <div class="topic absolute transform 2xl:translate-y-[2.77778vw] flex flex-no-wrap 2xl:w-[43.54167vw] 2xl:h-[10.48611vw]">
+      <h2 class="absolute transform 2xl:translate-y-[1.80694vw] 2xl:translate-x-[5.37708vw] text-center text-primary-default tracking-wider 2xl:h-[5.20833vw] 2xl:leading-[5.20833vw]">
         還有比賽等著你！
       </h2>
       <BaseTalkWindow />
     </div>
 
-    <div class="award-info absolute 2xl:translate-y-[17.43056vw] flex 2xl:w-[81.94444vw] 2xl:gap-x-[4.16667vw]">
-      <div class="relative 2xl:w-[35.20833vw] 2xl:[35.20833vw]">
+    <div class="award-info absolute transform 2xl:translate-y-[17.43056vw] flex 2xl:w-[81.94444vw] 2xl:gap-x-[4.16667vw]">
+      <div class="relative 2xl:w-[35.20833vw] 2xl:[35.20833vw] 3xl:w-[375px] 3xl:h-[375px]">
         <img
           alt="award-light"
           src="~/assets/images/main/award_light.png"

@@ -10,13 +10,14 @@
 // import cssnano from 'cssnano'
 // import purgecss from '@fullhuman/postcss-purgecss'
 
-const postcss = require('postcss')
+// const postcss = require('postcss')
 const postcssImport = require('postcss-import')
 const tailwindcssNesting = require('tailwindcss/nesting')
 const tailwindcss = require('tailwindcss')
+const windicss = require('postcss-windicss')
 const autoprefixer = require('autoprefixer')
 const postcssNested = require('postcss-nested')
-const postcssMixins = require('postcss-mixins')
+// const postcssMixins = require('postcss-mixins')
 const postcssSimpleVars = require('postcss-simple-vars')
 const px2vw = require('@our-patches/postcss-px-to-viewport')
 // const px2rem = require('postcss-pxtorem')
@@ -36,17 +37,19 @@ const excludeCssAttributes = [
 
 module.exports = {
   plugins: [
-    {
-      postcssPlugin: 'grouped',
-      Once (root, { result }) {
-        return postcss([postcssImport, postcssMixins, postcssSimpleVars]).process(
-          root,
-          result.opts
-        )
-      }
-    },
-    tailwindcssNesting(postcssNested),
-    tailwindcss({}),
+    //{
+    //  postcssPlugin: 'grouped',
+    //  Once (root, { result }) {
+    //    return postcss([postcssImport, postcssMixins, postcssSimpleVars]).process(
+    //      root,
+    //      result.opts
+    //    )
+    //  }
+    //},
+    postcssImport({}),
+    // tailwindcssNesting(postcssNested),
+    // tailwindcss({}),
+    windicss({}),
     process.env.NODE_ENV === 'production' ? autoprefixer : null,
     // px2vw({
     //   unitToConvert: 'px',

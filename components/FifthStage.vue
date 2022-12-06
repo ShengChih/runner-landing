@@ -1,7 +1,7 @@
 <template>
   <div id="fifth-stage" class="relative flex justify-center w-full h-screen">
 
-    <div class="relative flex flex-col items-center 2xl:h-[38.88889vw] 2xl:px-[3.50694vw] 2xl:translate-y-[5.83333vw]">
+    <div class="relative flex flex-col items-center 2xl:h-[38.88889vw] 2xl:px-[3.50694vw] transform 2xl:translate-y-[5.83333vw]">
       <div class="flex flex-no-wrap h-min 2xl:gap-x-[12.77778vw]">
 
         <div class="date-card1 flex flex-col items-center 2xl:w-[20.97222vw] 2xl:h-[36.94444vw]">
@@ -27,7 +27,7 @@
           <img
             alt="date-weekLing"
             src="~/assets/images/main/date_weekLine.png"
-            class="absolute 2xl:translate-y-[24.02778vw] 2xl:h-[9.72222vw]"
+            class="absolute transform 2xl:translate-y-[24.02778vw] 2xl:h-[9.72222vw]"
           >
           <div class="absolute w-full flex flex-col items-center bg-secondary-default 2xl:p-[1.38889vw]">
             <div class="flex flex-col items-center 2xl:gap-y-[0.57361vw] 2xl:pt-[2.84722vw]">
@@ -49,7 +49,7 @@
           <img
             alt="date-weekLing"
             src="~/assets/images/main/date_weekLine.png"
-            class="absolute 2xl:h-[9.72222vw] 2xl:translate-y-[27.01389vw]"
+            class="absolute 2xl:h-[9.72222vw] transform 2xl:translate-y-[27.01389vw]"
           >
 
           <div class="absolute flex flex-col items-center bg-secondary-default 2xl:p-[1.38889vw]">
@@ -77,10 +77,10 @@
       <img
         alt="date-line"
         src="~/assets/images/main/date_line.png"
-        class="date-line absolute 2xl:w-[100vw] 2xl:h-[6.94444vw] 2xl:translate-y-[32.5vw]"
+        class="date-line absolute 2xl:w-[100vw] 2xl:h-[6.94444vw] transform 2xl:translate-y-[32.5vw]"
       >
       <div
-        class="absolute right-0 cover-date-line absolute bg-secondary-default 2xl:w-[100vw] 2xl:h-[6.94444vw] 2xl:translate-y-[32.5vw]"
+        class="absolute right-0 cover-date-line absolute bg-secondary-default 2xl:w-[100vw] 2xl:h-[6.94444vw] transform 2xl:translate-y-[32.5vw]"
       ></div>
 
     </div>

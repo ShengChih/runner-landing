@@ -3,17 +3,17 @@
     <img
       alt="tree"
       src="~/assets/images/bg/bg_decorate_04.png"
-      class="left-tree absolute 2xl:translate-x-[-23.22917vw] 2xl:translate-y-[33.61111vw] 2xl:w-[22.98611vw]"
+      class="left-tree absolute  transform 2xl:translate-y-[33.61111vw] 2xl:translate-x-[-23.22917vw] 2xl:w-[22.98611vw]"
     >
 
     <img
       alt="tree"
       src="~/assets/images/bg/bg_decorate_08.png"
-      class="right-tree absolute 2xl:translate-x-[21.31944vw] 2xl:translate-y-[35.41667vw] 2xl:w-[23.75vw]"
+      class="right-tree absolute  transform 2xl:translate-y-[35.41667vw]  2xl:translate-x-[21.31944vw] 2xl:w-[23.75vw]"
     >
 
-    <div class="topic absolute 2xl:translate-y-[2.77778vw] flex flex-no-wrap 2xl:w-[32.36111vw] 2xl:h-[10.48611vw]">
-      <h2 class="absolute 2xl:translate-y-[1.80694vw] 2xl:translate-x-[7.50417vw] text-center text-primary-default tracking-wider 2xl:h-[5.20833vw] 2xl:leading-[5.20833vw]">
+    <div class="topic absolute transform 2xl:translate-y-[2.77778vw] flex flex-no-wrap 2xl:w-[32.36111vw] 2xl:h-[10.48611vw]">
+      <h2 class="absolute transform 2xl:translate-y-[1.80694vw] 2xl:translate-x-[7.50417vw] text-center text-primary-default tracking-wider 2xl:h-[5.20833vw] 2xl:leading-[5.20833vw]">
         贊助單位
       </h2>
       <img
@@ -33,7 +33,7 @@
       >
     </div>
 
-    <div class="logo absolute 2xl:translate-y-[15vw] flex flex-no-wrap 2xl:w-[83.05556vw] 2xl:h-[25.625vw] 2xl:gap-x-[8.71528vw]">
+    <div class="logo absolute transform 2xl:translate-y-[15vw] flex flex-no-wrap 2xl:w-[83.05556vw] 2xl:h-[25.625vw] 2xl:gap-x-[8.71528vw]">
       <div class="logo1 flex flex-col justify-center items-center 2xl:gap-y-[0.83333vw]">
         <div class="relative flex justify-center items-center 2xl:w-[21.875vw] ">
           <img
@@ -48,7 +48,7 @@
           >
           <img
             alt=""
-            class="absolute 2xl:translate-x-[-0.45139vw] 2xl:translate-y-[-0.65972vw] 2xl:w-[17.36111vw]"
+            class="absolute 2xl:translate-x-[-0.45139vw] transform 2xl:translate-y-[-0.65972vw] 2xl:w-[17.36111vw]"
             src="~/assets/images/main/logo_blockstudio.png"
           >
         </div>
@@ -70,7 +70,7 @@
           >
           <img
             alt=""
-            class="absolute 2xl:translate-x-[-0.45139vw] 2xl:translate-y-[-0.65972vw] 2xl:w-[17.36111vw]"
+            class="absolute 2xl:translate-x-[-0.45139vw] transform 2xl:translate-y-[-0.65972vw] 2xl:w-[17.36111vw]"
             src="~/assets/images/main/logo_titansoft.png"
           >
         </div>
@@ -92,7 +92,7 @@
           >
           <img
             alt=""
-            class="absolute 2xl:translate-x-[-0.45139vw] 2xl:translate-y-[-0.65972vw] 2xl:w-[17.36111vw]"
+            class="absolute 2xl:translate-x-[-0.45139vw] transform 2xl:translate-y-[-0.65972vw] 2xl:w-[17.36111vw]"
             src="~/assets/images/main/logo_kdanmobile.png"
           >
         </div>

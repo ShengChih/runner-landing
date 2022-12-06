@@ -11,7 +11,7 @@
         class="absolute w-full h-full object-fit"
       >
       <div class="w-full absolute flex flex-no-wrap">
-        <div class="grow" />
+        <div class="grow flex-grow" />
         <div class=" flex flex-row 2xl:gap-x-[1.11111vw] 2xl:w-[12.43056vw] 2xl:h-[3.40278vw]">
           <img
             class="light-red 2xl:translate-x-[0.13889vw]"
@@ -29,7 +29,7 @@
             src="~/assets/images/main/ready_1.png"
           >
         </div>
-        <div class="grow-[2]" />
+        <div class="grow-[2] flex-grow-[2]" />
       </div>
     </div>
   </div>

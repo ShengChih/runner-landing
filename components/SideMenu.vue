@@ -6,7 +6,7 @@
       src="~/assets/images/bg/bg_menuSide.png"
     >
     <img
-      class="2xl:w-[4.16667vw] 2xl:h-[4.62986vw] 2xl:translate-y-[35.20833vw]"
+      class="2xl:w-[4.16667vw] 2xl:h-[4.62986vw] transform 2xl:translate-y-[35.20833vw]"
       alt="hide menu"
       src="~/assets/images/btn/btn_burger_open.png"
     >
