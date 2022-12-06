@@ -77,10 +77,10 @@
       <img
         alt="date-line"
         src="~/assets/images/main/date_line.png"
-        class="date-line absolute 2xl:w-[100vw] 2xl:h-[6.94444vw] 2xl:translate-y-[468px]"
+        class="date-line absolute 2xl:w-[100vw] 2xl:h-[6.94444vw] 2xl:translate-y-[32.5vw]"
       >
       <div
-        class="absolute right-0 cover-date-line absolute bg-secondary-default 2xl:w-[100vw] 2xl:h-[6.94444vw] 2xl:translate-y-[468px]"
+        class="absolute right-0 cover-date-line absolute bg-secondary-default 2xl:w-[100vw] 2xl:h-[6.94444vw] 2xl:translate-y-[32.5vw]"
       ></div>
 
     </div>
