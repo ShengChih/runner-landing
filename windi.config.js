@@ -2,6 +2,7 @@ import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
   darkMode: 'class', // or 'media'
+  attributify: true,
   extract: {
     include: [
       './components/**/*.{vue,js,ts}',

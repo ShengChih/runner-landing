@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import 'virtual:windi.css'
+import './global.css'
+
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 

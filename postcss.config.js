@@ -47,9 +47,11 @@ module.exports = {
     //  }
     //},
     postcssImport({}),
-    // tailwindcssNesting(postcssNested),
-    // tailwindcss({}),
-    windicss({}),
+    // process.env.NODE_ENV === 'production' ? null : tailwindcssNesting(postcssNested),
+    // process.env.NODE_ENV === 'production' ? null : tailwindcss({}),
+    // windicss({
+    //   config: './windi.config.js'
+    // }),
     process.env.NODE_ENV === 'production' ? autoprefixer : null,
     // px2vw({
     //   unitToConvert: 'px',
@@ -104,25 +106,25 @@ module.exports = {
     process.env.NODE_ENV === 'production'
       ? cssnano({ preset: 'default' })
       : null,
-    process.env.NODE_ENV === 'production'
-      ? purgecss({
-        stdin: true,
-        stdout: true,
-        content: [
-          './components/**/*.{vue,js,ts}',
-          './layouts/**/*.vue',
-          './pages/**/*.vue',
-          './composables/**/*.{js,ts,vue}',
-          './plugins/**/*.{js,ts,vue}',
-          './app.{js,ts,vue}',
-          './assets/styles/global.css'
-        ],
-        css: [
-
-        ],
-
-        defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
-      })
-      : null
+    // process.env.NODE_ENV === 'production'
+    //   ? purgecss({
+    //     stdin: true,
+    //     stdout: true,
+    //     content: [
+    //       './components/**/*.{vue,js,ts}',
+    //       './layouts/**/*.vue',
+    //       './pages/**/*.vue',
+    //       './composables/**/*.{js,ts,vue}',
+    //       './plugins/**/*.{js,ts,vue}',
+    //       './app.{js,ts,vue}',
+    //       './assets/styles/global.css'
+    //     ],
+    //     css: [
+    // 
+    //     ],
+    // 
+    //     defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+    //   })
+    //   : null
   ].filter(plugin => !!plugin)
 }
