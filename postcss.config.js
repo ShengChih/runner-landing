@@ -64,7 +64,7 @@ module.exports = {
     // }),
     px2vw({
       unitToConvert: 'px',
-      viewportWidth: 1440,
+      viewportWidth: 1920,
       unitPrecision: 5,
       propList: excludeCssAttributes,
       viewportUnit: 'vw',
