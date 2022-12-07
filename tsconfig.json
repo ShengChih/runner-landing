@@ -10,6 +10,7 @@
     ]
   },
   "files": [
+    "html.d.ts",
     "../../node_modules/gsap/types/index.d.ts"
   ]
 }

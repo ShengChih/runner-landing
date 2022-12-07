@@ -2,7 +2,7 @@ import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
   darkMode: 'class', // or 'media'
-  attributify: true,
+  attributify: false,
   extract: {
     include: [
       './components/**/*.{vue,js,ts}',
@@ -11,13 +11,14 @@ export default defineConfig({
       './composables/**/*.{js,ts}',
       './plugins/**/*.{js,ts}',
       './app.{js,ts,vue}'
-    ],
+    ]
   },
   theme: {
     extend: {
       screens: {
         sm: '375px',
         md: '768px',
+        xl: '1024px',
         '2xl': '1440px',
         '3xl': '1920px'
       },
@@ -48,5 +49,5 @@ export default defineConfig({
         }
       }
     }
-  },
+  }
 })

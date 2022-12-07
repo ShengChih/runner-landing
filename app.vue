@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// import '@unocss/reset/normalize.css'
 import 'virtual:windi.css'
 import './global.css'
 
@@ -30,7 +31,7 @@ if (process.client) {
         return
       }
 
-      currentTime.value +=  Math.floor(Math.random() * 150)
+      currentTime.value += Math.floor(Math.random() * 150)
       progress.value = (currentTime.value / maxTime.value) * 100
     }, 100)
   }
@@ -83,29 +84,29 @@ if (process.client) {
     })
 
     t2.set('#second-stage .asking', { opacity: 0 })
-      .set('#second-stage .question1', { opacity: 0, xPercent: -10 } )
-      .set('#second-stage .question2', { opacity: 0 } )
-      .set('#second-stage .question3', { opacity: 0, xPercent: 10 } )
-      .set('#mask-top .f2e-logo', { opacity: 0 } )
+      .set('#second-stage .question1', { opacity: 0, xPercent: -10 })
+      .set('#second-stage .question2', { opacity: 0 })
+      .set('#second-stage .question3', { opacity: 0, xPercent: 10 })
+      .set('#mask-top .f2e-logo', { opacity: 0 })
       .set('#mask-top .left-tree', { scaleX: 1.5, scaleY: -1.5, opacity: 0, yPercent: -5 })
-      .set('#mask-top .right-tree', { scale: 1.5 , opacity: 0, yPercent: -4 })
+      .set('#mask-top .right-tree', { scale: 1.5, opacity: 0, yPercent: -4 })
       .to('#mask-top .f2e-logo', { opacity: 1, duration: 0.1 })
       .to('#second-stage .asking', { opacity: 1, duration: 0.1 })
       .to('#mask-top .playground', { scale: 0.7684, duration: 0.5 }, '<')
       .to('#mask-top .playground', { yPercent: 13, duration: 0.5 }, '<')
       .to('#mask-top .pig, .dog', { scale: 0.7086, duration: 0.5, yPercent: 15 }, '<')
       .to('#mask-top .cat', { scale: 0.70533, duration: 0.5, yPercent: 15 }, '<')
-      .to('#mask-top .left-tree', { scaleX: 1, scaleY: -1 ,opacity: 1, yPercent: -5, duration: 0.5 }, '<')
-      .to('#mask-top .right-tree', { scale:1, opacity: 1, yPercent: -5, duration: 0.5 }, '<')
-      .to('#second-stage .question1', { opacity: 1, xPercent: 0, duration:0.5 })
-      .to('#mask-top .left-tree', { xPercent: 40, yPercent: -10, duration:0.5 }, '<')
-      .to('#mask-top .right-tree', { xPercent: -40, yPercent: -10, duration:0.5 }, '<')
-      .to('#second-stage .question2', { opacity: 1, duration:0.5 })
-      .to('#mask-top .left-tree', { xPercent: 100, yPercent: -20, duration:0.5 }, '<')
-      .to('#mask-top .right-tree', { xPercent: -100, yPercent: -20, duration:0.5 }, '<')
-      .to('#second-stage .question3', { opacity: 1, xPercent: 0, duration:0.5 })
-      .to('#mask-top .left-tree', { xPercent: 100, opacity: 0, yPercent: -30, duration:0.5 }, '<')
-      .to('#mask-top .right-tree', { xPercent: -100, opacity: 0, yPercent: -30, duration:0.5 }, '<')
+      .to('#mask-top .left-tree', { scaleX: 1, scaleY: -1, opacity: 1, yPercent: -5, duration: 0.5 }, '<')
+      .to('#mask-top .right-tree', { scale: 1, opacity: 1, yPercent: -5, duration: 0.5 }, '<')
+      .to('#second-stage .question1', { opacity: 1, xPercent: 0, duration: 0.5 })
+      .to('#mask-top .left-tree', { xPercent: 40, yPercent: -10, duration: 0.5 }, '<')
+      .to('#mask-top .right-tree', { xPercent: -40, yPercent: -10, duration: 0.5 }, '<')
+      .to('#second-stage .question2', { opacity: 1, duration: 0.5 })
+      .to('#mask-top .left-tree', { xPercent: 100, yPercent: -20, duration: 0.5 }, '<')
+      .to('#mask-top .right-tree', { xPercent: -100, yPercent: -20, duration: 0.5 }, '<')
+      .to('#second-stage .question3', { opacity: 1, xPercent: 0, duration: 0.5 })
+      .to('#mask-top .left-tree', { xPercent: 100, opacity: 0, yPercent: -30, duration: 0.5 }, '<')
+      .to('#mask-top .right-tree', { xPercent: -100, opacity: 0, yPercent: -30, duration: 0.5 }, '<')
 
     timelines.push(t2)
 
@@ -130,9 +131,9 @@ if (process.client) {
       .to('#third-stage .third-part1, .third-part2', { opacity: 0, duration: 1 })
       .to('#mask-top .playground', { scale: 0.681, duration: 0.5 }, '<')
       .to('#mask-top .playground', { yPercent: 15, duration: 0.5 }, '<')
-      .to('#mask-top .dog', { scale: 0.39, xPercent: 40, yPercent:30, duration: 0.5 }, '<')
-      .to('#mask-top .pig', { scale: 0.39, xPercent: -25, yPercent:40, duration: 0.5 }, '<')
-      .to('#mask-top .cat', { scale: 0.282, xPercent: 0, yPercent:30, duration: 0.5 }, '<')
+      .to('#mask-top .dog', { scale: 0.39, xPercent: 40, yPercent: 30, duration: 0.5 }, '<')
+      .to('#mask-top .pig', { scale: 0.39, xPercent: -25, yPercent: 40, duration: 0.5 }, '<')
+      .to('#mask-top .cat', { scale: 0.282, xPercent: 0, yPercent: 30, duration: 0.5 }, '<')
 
     timelines.push(t3)
 
@@ -216,7 +217,6 @@ if (process.client) {
 
     timelines.push(t5)
 
-
     const t6 = gsap.timeline({
       scrollTrigger: {
         trigger: '#sixth-stage',
@@ -269,7 +269,7 @@ if (process.client) {
         pinnedContainer: '#app',
         scrub: true,
         markers: true,
-        id: "t8",
+        id: 't8'
       }
     })
 
@@ -283,7 +283,7 @@ if (process.client) {
       .to('#eighth-stage .topic', { opacity: 1 }, '<')
       .to('#eighth-stage .left-tree, #eighth-stage .right-tree', { opacity: 1, duration: 0 })
       .to('#eighth-stage .left-tree, #eighth-stage .right-tree', { scale: 1, duration: 0.7 }, '<')
-      .to('#eighth-stage .left-tree, #eighth-stage .right-tree', { xPercent: 0, yPercent: 0, duration: 1}, '<')
+      .to('#eighth-stage .left-tree, #eighth-stage .right-tree', { xPercent: 0, yPercent: 0, duration: 1 }, '<')
       .to('#eighth-stage .logo1', { opacity: 1, yPercent: 0, duration: 0.5, delay: 0 })
       .to('#eighth-stage .logo2', { opacity: 1, yPercent: 0, duration: 0.5, delay: 0.3 })
       .to('#eighth-stage .logo3', { opacity: 1, yPercent: 0, duration: 0.5, delay: 0.3 })
@@ -298,8 +298,8 @@ if (process.client) {
         pinnedContainer: '#app',
         scrub: true,
         markers: true,
-        id: "t9",
-        pinSpacing: true,
+        id: 't9',
+        pinSpacing: true
       }
     })
 
@@ -307,10 +307,10 @@ if (process.client) {
       .set('#mask-top .finish-line', { opacity: 0 })
       .set('#ninth-stage .finish-point', { scale: 1.5 })
       .set('#ninth-stage .left-cloud', { scale: 1.3, xPercent: -100, opacity: 0 })
-      .set('#ninth-stage .right-cloud', { scale:1.3, xPercent: 100, opacity: 0 })
+      .set('#ninth-stage .right-cloud', { scale: 1.3, xPercent: 100, opacity: 0 })
       .set('#ninth-stage .finish-point', { opacity: 0 })
-      .to('#ninth-stage .left-cloud', { opacity:1, duration: 0.2 })
-      .to('#ninth-stage .right-cloud', { opacity:1, duration: 0.2 }, '<')
+      .to('#ninth-stage .left-cloud', { opacity: 1, duration: 0.2 })
+      .to('#ninth-stage .right-cloud', { opacity: 1, duration: 0.2 }, '<')
       .to('#ninth-stage .left-cloud', { scale: 1, duration: 2, xPercent: 20, yPercent: -50 }, '<')
       .to('#ninth-stage .right-cloud', { scale: 1, duration: 2, xPercent: -20, yPercent: -50 }, '<')
       .to('#ninth-stage .finish-point', { opacity: 1, duration: 0.2 })
@@ -326,7 +326,7 @@ if (process.client) {
       .to('#mask-top .finish-line-r', { rotate: 10, duration: 0.5 }, '<')
       .to('#mask-top .finish-line-l', { xPercent: -200, duration: 5 })
       .to('#mask-top .finish-line-r', { xPercent: 200, duration: 5 }, '<')
-      .to('#mask-top .dog', { scale: 2, opacity: 0, duration: 3 },)
+      .to('#mask-top .dog', { scale: 2, opacity: 0, duration: 3 })
       .to('#mask-top .pig', { scale: 2, opacity: 0, duration: 3 }, '<')
       .to('#mask-top .cat', { scale: 2, opacity: 0, duration: 3 }, '<')
       .to('#ninth-stage', { opacity: 0, duration: 3 })
@@ -338,14 +338,13 @@ if (process.client) {
     timelines.push(t9)
 
     setTimeout(() => {
-      isLoading.value = false;
+      isLoading.value = false
     }, maxTime.value)
   })
 
   onUnmounted(() => {
     timelines && timelines.map(tl => tl && tl.kill())
   })
-
 }
 
 </script>
@@ -388,7 +387,7 @@ if (process.client) {
         >
         <Map class="map fixed 2xl:w-[18.05556vw] 2xl:h-[11.80556vw] 2xl:translate-x-[-38.88889vw] transform 2xl:translate-y-[57.91667vw]" />
         <SideMenu class="fixed 2xl:left-[-0.34722vw]" />
-        <FinishLogo class="finish-logo fixed transform 2xl:translate-y-[8.61111vw] "/>
+        <FinishLogo class="finish-logo fixed transform 2xl:translate-y-[8.61111vw] " />
       </div>
 
       <div v-if="isLoading" class="fixed w-screen h-screen top-0 left-0 bg-secondary-default flex items-center justify-center">

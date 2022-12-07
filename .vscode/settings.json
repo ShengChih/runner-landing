@@ -27,6 +27,7 @@
     "tailwindcss",
     "titansoft",
     "truetype",
+    "unocss",
     "vueuse",
     "windi",
     "windicss"
@@ -125,5 +126,5 @@
     "jsx-quotes",
     "comma-dangle",
     "dot-notation",
-  ],
+  ]
 }
