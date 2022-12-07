@@ -1,6 +1,12 @@
 <template>
   <div id="third-stage" class="relative w-full h-screen flex flex-col items-center">
-    <WeeklyTopic class="third-part1 absolute transform 2xl:translate-y-[2.77778vw]" />
+    <WeeklyTopic
+      :class="[
+        'third-part1 absolute transform',
+        '2xl:translate-y-[2.77778vw]',
+        '3xl:translate-y-[2.08333vw]'
+      ]"
+    />
 
     <h5
       :class="[
