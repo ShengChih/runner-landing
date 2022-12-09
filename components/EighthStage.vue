@@ -31,7 +31,7 @@
         :class="[
           'absolute flex items-center text-primary-default tracking-wider transform ',
           '2xl:translate-y-[1.80694vw] 2xl:translate-x-[7.50417vw] 2xl:h-[5.20833vw]',
-          '3xl:translate-y-[1.35521vw] 2xl:translate-x-[5.62812vw] 2xl:h-[7.86458vw]'
+          '3xl:translate-y-[1.35521vw] 2xl:translate-x-[5.62812vw] 2xl:h-[3.90625vw]'
         ]"
       >
         贊助單位
