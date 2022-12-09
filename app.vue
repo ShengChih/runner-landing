@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // import '@unocss/reset/normalize.css'
-import 'virtual:windi.css'
+// import 'virtual:windi.css'
 import './global.css'
 
 import { gsap } from 'gsap'
@@ -366,13 +366,49 @@ if (process.client) {
         id="mask-top"
         class="wait w-screen h-screen fixed flex justify-center top-0 left-0"
       >
-        <Tree class="left-tree fixed -scale-x-100 2xl:bottom-[-1.21389vw] 2xl:translate-x-[-31.94444vw] " />
-        <Tree class="right-tree fixed 2xl:bottom-[-1.21389vw] 2xl:translate-x-[31.25vw] " />
-        <Playground class="playground fixed 2xl:top-[61.73611vw]" />
-        <Dog class="dog fixed transform 2xl:translate-y-[34.86111vw] 2xl:translate-x-[-20.69444vw]" />
-        <Cat class="cat fixed transform 2xl:translate-y-[34.16667vw] 2xl:translate-x-[-0.65972vw]" />
-        <Pig class="pig fixed transform 2xl:translate-y-[39.65278vw] 2xl:translate-x-[20.27778vw]" />
-        <Avatar class="right-0 avatar  transform 2xl:translate-y-[2.08333vw] 2xl:translate-x-[-1.04167vw]" />
+        <Tree
+          :class="[
+            'left-tree fixed transform -scale-x-100',
+            '2xl:translate-y-[62.9861vw] 2xl:translate-x-[-31.94444vw]',
+            '3xl:translate-y-[49.6875vw] 3xl:translate-x-[-24.58333vw]'
+          ]"
+        />
+        <Tree
+          :class="[
+            'right-tree transform fixed ',
+            '2xl:translate-y-[62.9861vw] 2xl:translate-x-[31.25vw]',
+            '3xl:translate-y-[49.6875vw] 3xl:translate-x-[21.77083vw]'
+          ]"
+        />
+        <Playground class="playground fixed transform 2xl:translate-y-[61.73611vw] 3xl:translate-y-[49.21875vw]" />
+        <Dog
+          :class="[
+            'dog fixed transform',
+            '2xl:translate-y-[34.86111vw] 2xl:translate-x-[-20.69444vw]',
+            '3xl:translate-y-[24.11458vw] 3xl:translate-x-[-17.47396vw]'
+          ]"
+        />
+        <Cat
+          :class="[
+            'cat fixed transform',
+            '2xl:translate-y-[34.16667vw] 2xl:translate-x-[-0.65972vw]',
+            '3xl:translate-y-[23.54167vw] 3xl:translate-x-[-0.05208vw]'
+          ]"
+        />
+        <Pig
+          :class="[
+            'pig fixed transform',
+            '2xl:translate-y-[39.65278vw] 2xl:translate-x-[20.27778vw]',
+            '3xl:translate-y-[28.33333vw] 3xl:translate-x-[17.99479vw]'
+          ]"
+        />
+        <Avatar
+          :class="[
+            'right-0 avatar transform',
+            '2xl:translate-y-[2.08333vw] 2xl:translate-x-[-1.04167vw]',
+            '3xl:translate-y-[1.5625vw] 3xl:translate-x-[-1.04167vw]'
+          ]"
+        />
         <JoinButton class="base-join-btn fixed transform 2xl:translate-y-[57.70833vw] 2xl:translate-x-[45.03472vw] " />
         <F2ELogo class="f2e-logo fixed transform 2xl:translate-y-[2.08333vw] 2xl:translate-x-[-40.27778vw] 2xl:w-[13.88889vw] 2xl:h-[10.34097vw]" />
         <img
