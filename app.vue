@@ -268,7 +268,7 @@ if (process.client) {
         pin: true,
         pinnedContainer: '#app',
         scrub: true,
-        markers: true,
+        // markers: true,
         id: 't8'
       }
     })
@@ -297,7 +297,7 @@ if (process.client) {
         pin: true,
         pinnedContainer: '#app',
         scrub: true,
-        markers: true,
+        // markers: true,
         id: 't9',
         pinSpacing: true
       }
