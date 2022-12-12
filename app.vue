@@ -409,25 +409,51 @@ if (process.client) {
             '3xl:translate-y-[1.5625vw] 3xl:translate-x-[-1.04167vw]'
           ]"
         />
-        <JoinButton class="base-join-btn fixed transform 2xl:translate-y-[57.70833vw] 2xl:translate-x-[45.03472vw] " />
-        <F2ELogo class="f2e-logo fixed transform 2xl:translate-y-[2.08333vw] 2xl:translate-x-[-40.27778vw] 2xl:w-[13.88889vw] 2xl:h-[10.34097vw]" />
+        <JoinButton
+          :class="[
+            'base-join-btn fixed transform',
+            '2xl:translate-y-[57.70833vw] 2xl:translate-x-[45.03472vw]',
+            '3xl:translate-y-[46.19792vw] 3xl:translate-x-[46.27604vw]'
+          ]"
+        />
+        <F2ELogo
+          :class="[
+            'f2e-logo fixed transform',
+            '2xl:translate-y-[2.08333vw] 2xl:translate-x-[-40.27778vw] 2xl:w-[13.88889vw] 2xl:h-[10.34097vw]',
+            '3xl:translate-y-[1.5625vw] 3xl:translate-x-[-42.70833vw] 3xl:w-[10.41667vw] 3xl:h-[7.75573vw]'
+          ]"
+        />
         <img
           alt="finish-line"
           src="~/assets/images/main/finishLine_l.png"
-          class="finish-line finish-line-l absolute 2xl:translate-x-[-15.97222vw] transform 2xl:translate-y-[50.76389vw] 2xl:w-[95.20833vw] 2xl:h-[8.99306vw]"
+          :class="[
+            'finish-line finish-line-l absolute transform',
+            '2xl:translate-x-[-15.97222vw] 2xl:translate-y-[50.76389vw] 2xl:w-[95.20833vw] 2xl:h-[8.99306vw]',
+            '3xl:translate-x-[-24.60938vw] 3xl:translate-y-[38.07292vw] 3xl:w-[50.78125vw] 3xl:h-[6.74479vw]'
+          ]"
         >
         <img
           alt="finish-line"
           src="~/assets/images/main/finishLine_r.png"
-          class="finish-line finish-line-r absolute 2xl:translate-x-[35.41667vw] transform 2xl:translate-y-[50.76389vw] 2xl:w-[95.20833vw] 2xl:h-[8.99306vw]"
+          :class="[
+            'finish-line finish-line-r absolute transform',
+            '2xl:translate-x-[35.41667vw] 2xl:translate-y-[50.76389vw] 2xl:w-[95.20833vw] 2xl:h-[8.99306vw]',
+            '3xl:translate-x-[24.60938vw] 3xl:translate-y-[38.07292vw] 3xl:w-[50.78125vw] 3xl:h-[6.74479vw]',
+          ]"
         >
-        <Map class="map fixed 2xl:w-[18.05556vw] 2xl:h-[11.80556vw] 2xl:translate-x-[-38.88889vw] transform 2xl:translate-y-[57.91667vw]" />
-        <SideMenu class="fixed 2xl:left-[-0.34722vw]" />
+        <Map
+          :class="[
+            'map fixed transform',
+            '2xl:w-[18.05556vw] 2xl:h-[11.80556vw] 2xl:translate-x-[-38.88889vw] 2xl:translate-y-[57.91667vw]',
+            '3xl:w-[11.69375vw] 3xl:h-[7.29062vw] 3xl:translate-x-[-41.54115vw] 3xl:translate-y-[47.24063vw]'
+          ]"
+        />
+        <SideMenu class="fixed 2xl:left-[-0.34722vw] 3xl:left-0" />
         <FinishLogo class="finish-logo fixed transform 2xl:translate-y-[8.61111vw] " />
       </div>
 
       <div v-if="isLoading" class="fixed w-screen h-screen top-0 left-0 bg-secondary-default flex items-center justify-center">
-        <BaseLoading :progress="progress" class="2xl:w-[32.36111vw] 2xl:h-[16.52778vw]" />
+        <BaseLoading :progress="progress" class="2xl:w-[32.36111vw] 2xl:h-[16.52778vw] 3xl:w-[24.375vw] 3xl:h-[12.39583vw]" />
       </div>
     </NuxtLayout>
   </div>
